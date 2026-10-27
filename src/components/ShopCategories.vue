@@ -43,7 +43,7 @@ const categories = [
           </h2>
         </div>
         <p class="font-body-md text-secondary max-w-md">
-          Original works in three distinct mediums. Archival fine art prints are available for every artwork across all mediums for $50 each.
+          Original works in three distinct mediums. Signed prints are available for each painting at $50 each.
         </p>
       </div>
 

@@ -65,13 +65,13 @@ const currentPrice = computed(() => {
                   id="qv-badge"
                   class="inline-block border border-surface-container-highest bg-surface-container-low px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase"
                 >
-                  {{ isPrintSelected ? 'Archival Fine Art Print' : 'Unique Original Work' }}
+                  {{ isPrintSelected ? 'Signed Print ($50)' : 'Unique Original Work' }}
                 </span>
                 <span
                   v-if="!isPrintSelected"
                   class="inline-block border border-on-tertiary-container/30 bg-surface px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-on-tertiary-container uppercase"
                 >
-                  $50 Prints Available
+                  $50 Signed Prints Available
                 </span>
               </div>
 
@@ -84,7 +84,7 @@ const currentPrice = computed(() => {
                   ${{ currentPrice.toLocaleString() }}
                 </p>
                 <span class="text-caption text-secondary">
-                  {{ isPrintSelected ? 'Archival print ($50)' : 'Original piece' }}
+                  {{ isPrintSelected ? 'Signed print ($50)' : 'Original piece' }}
                 </span>
               </div>
 
@@ -116,13 +116,13 @@ const currentPrice = computed(() => {
                 </div>
               </div>
 
-              <!-- Archival Note -->
+              <!-- Print / Artwork Note -->
               <div class="border-t border-b border-surface-container-highest py-2.5 mb-6 text-caption font-caption text-secondary">
                 <template v-if="isPrintSelected">
-                  Museum-grade archival fine art print on heavy cotton rag paper. Available for each artwork in the 2026 catalogue for $50.
+                  Signed prints are available for each painting at $50 each.
                 </template>
                 <template v-else>
-                  Unique original from the 2026 selected works catalogue. Archival fine art prints of this work are also available for $50.
+                  Unique original from the 2026 selected works catalogue. Signed prints are available for each painting at $50 each.
                 </template>
               </div>
             </div>
@@ -132,8 +132,11 @@ const currentPrice = computed(() => {
               class="w-full bg-primary-container text-on-primary py-3 px-6 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200 cursor-pointer"
               @click="addQuickViewToBag"
             >
-              Add {{ isPrintSelected ? 'Print ($50)' : 'Original' }} to Bag
+              Add {{ isPrintSelected ? 'Signed Print ($50)' : 'Original' }} to Bag
             </button>
+            <p class="text-[11px] font-caption text-secondary text-center mt-2.5">
+              Orders continue directly with Ini Oluwa via Instagram DM (<strong>@ini.oluwa</strong>).
+            </p>
           </div>
         </div>
       </div>

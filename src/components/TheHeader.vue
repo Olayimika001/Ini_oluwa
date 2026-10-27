@@ -6,12 +6,10 @@ const { openNav, openCart, cartTotalCount } = useShop()
 
 <template>
   <header class="docked full-width top-0 sticky z-40 bg-surface/90 backdrop-blur-md border-b border-surface-container-highest transition-colors duration-150">
-    <!-- Announcement Bar for $50 Prints -->
+    <!-- Announcement Bar for $50 Signed Prints -->
     <div class="bg-primary-container text-on-primary py-1.5 px-4 text-center border-b border-surface-container-highest">
       <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 text-[11px] font-label-caps uppercase tracking-widest">
-        <span>Archival Fine Art Prints for Every Artwork</span>
-        <span class="text-on-tertiary-container">·</span>
-        <span class="text-white font-bold">$50 Each</span>
+        <span>Signed Prints are available for each painting at $50 each</span>
         <span class="hidden sm:inline text-on-tertiary-container">·</span>
         <a href="#featured-collection" class="hidden sm:inline underline underline-offset-2 hover:text-on-tertiary-container transition-colors">Browse Catalogue</a>
       </div>

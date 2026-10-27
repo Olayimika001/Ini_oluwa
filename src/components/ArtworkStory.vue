@@ -2,19 +2,21 @@
 import { PRODUCTS } from '../data/products'
 import { useShop } from '../composables/useShop'
 
-const { addToBag } = useShop()
+const { addToBag, openCart } = useShop()
 
 function acquireFeatured() {
   const prod = PRODUCTS.find(p => p.id === 1)
   if (prod) {
     addToBag(prod, prod.options[0], prod.price)
+    openCart()
   }
 }
 
 function orderFeaturedPrint() {
   const prod = PRODUCTS.find(p => p.id === 1)
   if (prod) {
-    addToBag(prod, 'Archival Print ($50)', 50)
+    addToBag(prod, 'Signed Print ($50)', 50)
+    openCart()
   }
 }
 </script>
@@ -58,10 +60,10 @@ function orderFeaturedPrint() {
 
           <div class="border-t border-b border-surface-container-highest py-4 space-y-2">
             <h4 class="font-label-caps text-label-caps uppercase tracking-wider text-primary">
-              Original &amp; Archival Prints Available
+              Original &amp; Signed Prints Available
             </h4>
             <p class="font-caption text-secondary leading-relaxed">
-              Available as the unique original work ($1,000) or as an archival museum-quality fine art print for $50. All 48 artworks across the catalogue can be collected as $50 prints. Direct inquiries: heyyinioluwa@gmail.com
+              Available as the unique original work ($1,000) or as a signed print for $50. Signed prints are available for each painting at $50 each. All orders and conversations continue directly in Instagram DM (<strong>@ini.oluwa</strong>) to discuss framing, shipping, and availability.
             </p>
           </div>
 
@@ -76,7 +78,7 @@ function orderFeaturedPrint() {
               class="bg-primary-container text-on-primary py-3.5 px-6 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200 cursor-pointer"
               @click="orderFeaturedPrint"
             >
-              Order Archival Print — $50
+              Order Signed Print — $50
             </button>
           </div>
         </div>

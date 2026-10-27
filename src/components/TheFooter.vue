@@ -7,10 +7,10 @@ const catalogLinks = [
 ]
 
 const serviceLinks = [
+  { label: 'Instagram DM @ini.oluwa', href: 'https://ig.me/m/ini.oluwa' },
+  { label: 'Instagram Profile @ini.oluwa', href: 'https://instagram.com/ini.oluwa' },
   { label: 'Email studio', href: 'mailto:heyyinioluwa@gmail.com' },
-  { label: 'Call +234 813 865 9176', href: 'tel:+2348138659176' },
-  { label: 'Instagram @ini.oluwa', href: 'https://instagram.com/ini.oluwa' },
-  { label: 'Enquire about a work', href: 'mailto:heyyinioluwa@gmail.com' }
+  { label: 'Call +234 813 865 9176', href: 'tel:+2348138659176' }
 ]
 </script>
 
@@ -22,7 +22,7 @@ const serviceLinks = [
           INI OLUWA
         </span>
         <p class="font-body-sm text-body-sm text-secondary">
-          Art catalogue and portfolio. Original ink and acrylic works on paper and canvas — intimacy, solitude, and the human condition. Archival fine art prints available for each artwork for $50.
+          Art catalogue and portfolio. Original ink and acrylic works on paper and canvas — intimacy, solitude, and the human condition. Signed prints are available for each painting at $50 each.
         </p>
         <div class="pt-2 flex items-center gap-4">
           <a class="font-label-caps text-label-caps uppercase text-primary hover:text-on-tertiary-container transition-colors" href="https://instagram.com/ini.oluwa" target="_blank" rel="noopener noreferrer">

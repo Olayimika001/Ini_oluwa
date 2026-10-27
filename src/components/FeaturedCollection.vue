@@ -57,7 +57,7 @@ function toggleShowAll() {
           </h2>
         </div>
         <p class="font-body-md text-secondary max-w-md">
-          Forty-eight original works in ink, white charcoal, and acrylic — available as unique pieces from the 2026 catalogue, with archival fine art prints for each artwork at $50.
+          Forty-eight original works in ink, white charcoal, and acrylic — available as unique pieces from the 2026 catalogue. Signed Prints are available for each painting at $50 each.
         </p>
       </div>
 
@@ -69,15 +69,15 @@ function toggleShowAll() {
           </div>
           <div>
             <span class="font-label-caps text-label-caps uppercase text-primary tracking-wider font-semibold block">
-              Archival Prints Available for Each Artwork
+              Signed Prints Available for Each Painting
             </span>
             <span class="font-body-sm text-secondary text-xs">
-              Every piece in the catalogue is available as a museum-quality archival fine art print on heavy cotton rag paper.
+              Signed Prints are available for each painting at $50 each.
             </span>
           </div>
         </div>
         <div class="inline-flex items-center gap-2 bg-surface-container px-3 py-1.5 border border-surface-container-highest self-start sm:self-auto shrink-0">
-          <span class="font-label-caps text-[11px] text-secondary uppercase tracking-wider">Prints</span>
+          <span class="font-label-caps text-[11px] text-secondary uppercase tracking-wider">Signed Prints</span>
           <span class="font-headline-sm text-lg font-bold text-primary">$50</span>
           <span class="font-caption text-[11px] text-secondary">each</span>
         </div>
@@ -111,9 +111,9 @@ function toggleShowAll() {
                 :alt="product.imgAlt"
                 class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
               />
-              <span class="absolute top-3 left-3 bg-surface/95 border border-surface-container-highest px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase">
+              <!-- <span class="absolute top-3 left-3 bg-surface/95 border border-surface-container-highest px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase">
                 {{ product.badge }}
-              </span>
+              </span> -->
 
               <button
                 class="absolute bottom-3 right-3 bg-surface/90 hover:bg-primary hover:text-on-primary text-primary p-2 border border-surface-container-highest transition-colors duration-150 flex items-center justify-center cursor-pointer"
@@ -136,9 +136,9 @@ function toggleShowAll() {
 
             <div class="flex justify-between items-center text-caption text-secondary/90 mb-4">
               <span class="truncate mr-2">{{ product.specs }}</span>
-              <span class="font-label-caps text-on-tertiary-container font-semibold uppercase text-[10px] tracking-wider shrink-0 bg-surface-container px-1.5 py-0.5 border border-surface-container-highest">
+              <!-- <span class="font-label-caps text-on-tertiary-container font-semibold uppercase text-[10px] tracking-wider shrink-0 bg-surface-container px-1.5 py-0.5 border border-surface-container-highest">
                 Print $50
-              </span>
+              </span> -->
             </div>
           </div>
 
@@ -152,10 +152,10 @@ function toggleShowAll() {
             </button>
             <button
               class="w-full bg-primary-container hover:bg-on-tertiary-container text-on-primary border border-primary py-2.5 px-2 font-label-caps text-[11px] uppercase tracking-wider transition-colors duration-150 cursor-pointer text-center"
-              title="Add $50 Archival Print to Bag"
-              @click="addToBag(product, 'Archival Print ($50)', 50)"
+              title="Add $50 Signed Print to Bag"
+              @click="addToBag(product, 'Signed Print ($50)', 50)"
             >
-              Print · $50
+              Signed Print
             </button>
           </div>
         </article>

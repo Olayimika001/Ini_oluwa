@@ -9,7 +9,56 @@ const quickViewProduct = ref<Product | null>(null)
 const selectedQuickViewVariant = ref<string>('')
 const toastMessage = ref('')
 const isToastVisible = ref(false)
+const isOrderCopied = ref(false)
+const orderMessage = ref('')
 let toastTimeout: number | undefined
+
+async function copyToClipboard(text: string): Promise<boolean> {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text)
+      return true
+    }
+  } catch (e) {
+    console.warn('Clipboard API error:', e)
+  }
+
+  try {
+    const textarea = document.createElement('textarea')
+    textarea.value = text
+    textarea.style.position = 'fixed'
+    textarea.style.left = '-9999px'
+    textarea.style.top = '-9999px'
+    document.body.appendChild(textarea)
+    textarea.focus()
+    textarea.select()
+    const successful = document.execCommand('copy')
+    document.body.removeChild(textarea)
+    return successful
+  } catch (err) {
+    console.error('Fallback copy failed', err)
+    return false
+  }
+}
+
+function generateOrderMessage(items: CartItem[], total: number): string {
+  const artworkLines = items
+    .map(
+      (item, i) =>
+        `${i + 1}. "${item.title}" — ${item.variant} ($${item.price.toLocaleString()} × ${item.quantity} = $${(item.price * item.quantity).toLocaleString()})`
+    )
+    .join('\n')
+
+  return `Hello Ini Oluwa (@ini.oluwa)!
+
+I would like to order / inquire about the following artwork(s) from your 2026 catalogue:
+
+${artworkLines}
+
+Total Subtotal: $${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+
+I'd like to discuss framing, shipping, availability, and any other details with you here on Instagram!`
+}
 
 export function useShop() {
   const cartTotalCount = computed(() => {
@@ -117,6 +166,7 @@ export function useShop() {
       const price = isPrint ? (quickViewProduct.value.printPrice ?? 50) : quickViewProduct.value.price
       addToBag(quickViewProduct.value, selectedQuickViewVariant.value, price)
       closeQuickView()
+      openCart()
     }
   }
 
@@ -127,20 +177,66 @@ export function useShop() {
     if (item.quantity <= 0) {
       cart.value.splice(index, 1)
     }
+    isOrderCopied.value = false
   }
 
   function removeCartItem(index: number) {
     if (cart.value[index]) {
       cart.value.splice(index, 1)
+      isOrderCopied.value = false
     }
   }
 
-  function checkout() {
+  function clearCart() {
+    cart.value = []
+    isOrderCopied.value = false
+    orderMessage.value = ''
+  }
+
+  async function copyOrderMessage(): Promise<boolean> {
+    if (cart.value.length === 0) return false
+    const message = generateOrderMessage(cart.value, cartSubtotal.value)
+    orderMessage.value = message
+    const copied = await copyToClipboard(message)
+    if (copied) {
+      isOrderCopied.value = true
+      showToast('Order details copied to clipboard!')
+    }
+    return copied
+  }
+
+  async function orderViaInstagram() {
     if (cart.value.length === 0) return
-    const formattedSubtotal = cartSubtotal.value.toFixed(2)
-    alert(
-      `Inquiry checkout for $${formattedSubtotal}. In a production store you will be directed to pay, or you can reach Ini Oluwa at heyyinioluwa@gmail.com.`
-    )
+
+    const message = generateOrderMessage(cart.value, cartSubtotal.value)
+    orderMessage.value = message
+    const copied = await copyToClipboard(message)
+    if (copied) {
+      isOrderCopied.value = true
+    }
+
+    // Direct link to Ini Oluwa's Instagram DM with URL encoded message parameter
+    const igUrl = `https://ig.me/m/ini.oluwa?text=${encodeURIComponent(message)}`
+    window.open(igUrl, '_blank', 'noopener,noreferrer')
+
+    showToast('Artwork list copied! Paste in @ini.oluwa DM to send.')
+  }
+
+  function orderViaWhatsApp() {
+    if (cart.value.length === 0) return
+
+    const message = generateOrderMessage(cart.value, cartSubtotal.value)
+    orderMessage.value = message
+
+    // WhatsApp natively pre-populates the input box so you can send immediately without pasting
+    const waUrl = `https://wa.me/2348138659176?text=${encodeURIComponent(message)}`
+    window.open(waUrl, '_blank', 'noopener,noreferrer')
+
+    showToast('Opening WhatsApp with order pre-filled...')
+  }
+
+  async function checkout() {
+    await orderViaInstagram()
   }
 
   return {
@@ -151,6 +247,8 @@ export function useShop() {
     selectedQuickViewVariant,
     toastMessage,
     isToastVisible,
+    isOrderCopied,
+    orderMessage,
     cartTotalCount,
     cartSubtotal,
     openCart,
@@ -165,6 +263,10 @@ export function useShop() {
     addQuickViewToBag,
     updateCartQuantity,
     removeCartItem,
+    clearCart,
+    copyOrderMessage,
+    orderViaInstagram,
+    orderViaWhatsApp,
     showToast,
     checkout
   }

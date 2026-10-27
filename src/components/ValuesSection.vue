@@ -2,9 +2,9 @@
 const values = [
   {
     icon: 'brush',
-    title: 'Originals & $50 Prints',
-    desc: 'Each piece is available as a unique original from the 2026 catalogue, with museum-grade archival fine art prints available for every artwork at $50.',
-    footer: 'Originals & $50 Prints'
+    title: 'Originals & Signed Prints',
+    desc: 'Each piece is available as a unique original from the 2026 catalogue. Signed prints are available for each painting at $50 each.',
+    footer: 'Signed Prints $50 each'
   },
   {
     icon: 'palette',
@@ -19,10 +19,10 @@ const values = [
     footer: 'Selected Works 2026'
   },
   {
-    icon: 'mail',
-    title: 'Studio Inquiries',
-    desc: 'Collect originals or order prints by adding works to your bag, or write directly. Studio contact is listed throughout the catalogue.',
-    footer: 'heyyinioluwa@gmail.com'
+    icon: 'forum',
+    title: 'Instagram Conversations',
+    desc: 'Orders and inquiries continue directly with Ini Oluwa via Instagram DM (@ini.oluwa). Have an open conversation about framing, delivery, and any questions without payment processors.',
+    footer: 'Instagram @ini.oluwa'
   }
 ]
 </script>

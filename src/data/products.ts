@@ -13,13 +13,13 @@ function work(
     title,
     price,
     printPrice: 50,
-    badge: 'Original & $50 Print',
+    // badge: 'Original & Signed Print',
     medium,
     specs: `${material} · ${size} · 2026`,
-    desc: `Original work by Ini Oluwa from the 2026 selected works catalogue (${material}; ${size}). Archival fine art prints are also available for each artwork for $50.`,
+    desc: `Original work by Ini Oluwa from the 2026 selected works catalogue (${material}; ${size}). Signed prints are available for each painting at $50 each.`,
     imgSrc: `/catalogue/works/work-${String(id).padStart(2, '0')}.jpg`,
     imgAlt: `${title} by Ini Oluwa, ${material}, ${size}, 2026`,
-    options: [`Original (${size})`, 'Archival Print ($50)']
+    options: [`Original (${size})`, 'Signed Print ($50)']
   }
 }
 

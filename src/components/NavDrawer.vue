@@ -65,10 +65,10 @@ function handleNavClick() {
 
         <div class="mt-6 p-4 bg-surface border border-surface-container-highest">
           <span class="font-label-caps uppercase text-[10px] text-on-tertiary-container tracking-wider font-semibold block">
-            Archival Art Prints
+            Signed Prints
           </span>
           <p class="font-caption text-secondary text-xs mt-1">
-            Archival fine art prints are available for each artwork in the catalogue for $50 each.
+            Signed prints are available for each painting at $50 each.
           </p>
         </div>
       </div>
