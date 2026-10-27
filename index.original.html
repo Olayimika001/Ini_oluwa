@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STUDIO MONOGRAPH — Elena Vance</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed-variant": "#494740",
+            "on-background": "#1b1c19",
+            "on-secondary-fixed": "#1d1c16",
+            "on-tertiary-fixed": "#390b00",
+            "tertiary-fixed": "#ffdbd0",
+            "on-primary-container": "#898787",
+            "primary-fixed-dim": "#c8c6c5",
+            "on-primary-fixed-variant": "#474746",
+            "surface-container-highest": "#e4e2dd",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#c4c7c7",
+            "secondary": "#615e57",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-variant": "#e4e2dd",
+            "tertiary": "#180200",
+            "on-surface": "#1b1c19",
+            "surface-dim": "#dbdad5",
+            "background": "#fbf9f4",
+            "inverse-primary": "#c8c6c5",
+            "on-secondary-container": "#67645d",
+            "surface": "#fbf9f4",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#e7e2d9",
+            "on-primary-fixed": "#1b1c1c",
+            "inverse-surface": "#30312e",
+            "surface-container-high": "#eae8e3",
+            "primary-fixed": "#e5e2e1",
+            "surface-container": "#f0eee9",
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#444748",
+            "surface-tint": "#5f5e5e",
+            "primary-container": "#202020",
+            "primary": "#080808",
+            "inverse-on-surface": "#f2f1ec",
+            "on-secondary": "#ffffff",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#e7e2d9",
+            "tertiary-container": "#410e00",
+            "tertiary-fixed-dim": "#ffb59d",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#c67155",
+            "surface-bright": "#fbf9f4",
+            "surface-container-low": "#f5f3ee",
+            "outline": "#747878",
+            "secondary-fixed-dim": "#cac6bd",
+            "on-tertiary-fixed-variant": "#76321b"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "4rem",
+            "space-xl": "3rem",
+            "space-md": "1rem",
+            "gutter": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.75rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "caption": ["Plus Jakarta Sans"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "display-xl": ["Playfair Display"],
+            "display-xl-mobile": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "headline-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "body-lg": ["17px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "caption": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f5f3ee;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c4c7c7;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased font-body-md selection:bg-surface-container-highest selection:text-primary">
+<!-- TOP APP BAR -->
+<header class="docked full-width top-0 sticky z-40 bg-surface/90 backdrop-blur-md border-b border-surface-container-highest transition-colors duration-150">
+<div class="flex justify-between items-center w-full px-5 md:px-16 max-w-7xl mx-auto h-20">
+<!-- Leading: Drawer Menu Button -->
+<button aria-label="Open Navigation Menu" class="p-2 -ml-2 text-primary hover:text-on-tertiary-container transition-opacity duration-150 active:opacity-70 focus:outline-none flex items-center justify-center" id="btn-open-drawer">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<!-- Brand / Wordmark -->
+<a class="text-headline-sm font-headline-sm tracking-wider text-primary uppercase text-center focus:outline-none" href="#">
+        STUDIO MONOGRAPH
+      </a>
+<!-- Trailing: Shopping Cart Toggle Button -->
+<button aria-label="Open Cart" class="p-2 -mr-2 text-primary hover:text-on-tertiary-container transition-opacity duration-150 active:opacity-70 focus:outline-none relative flex items-center justify-center" id="btn-open-cart">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+<!-- Live Counter Badge -->
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-label-caps font-bold px-1.5 py-0.5 min-w-[18px] text-center leading-tight" id="header-cart-badge">2</span>
+</button>
+</div>
+</header>
+<!-- NAVIGATION DRAWER -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop"></div>
+<aside aria-label="Main Navigation" class="fixed inset-y-0 left-0 w-80 max-w-[85vw] z-50 bg-surface-container-low border-r border-surface-container-highest shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-8" id="nav-drawer">
+<div>
+<div class="flex items-center justify-between pb-6 border-b border-surface-container-highest">
+<span class="text-headline-md font-headline-md text-primary uppercase tracking-widest text-lg">STUDIO MONOGRAPH</span>
+<button aria-label="Close Navigation Menu" class="p-1 text-secondary hover:text-primary focus:outline-none" id="btn-close-drawer">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="mt-4 flex flex-col">
+<a class="drawer-nav-link flex items-center gap-4 text-primary font-label-caps uppercase tracking-wider py-4 border-b border-surface-container-highest hover:text-on-tertiary-container transition-colors duration-150" href="#featured-collection">
+<span class="material-symbols-outlined">palette</span>
+<span>Prints &amp; Editions</span>
+</a>
+<a class="drawer-nav-link flex items-center gap-4 text-secondary font-label-caps uppercase tracking-wider py-4 border-b border-surface-container-highest/60 hover:text-on-tertiary-container transition-colors duration-150" href="#shop-categories">
+<span class="material-symbols-outlined">apparel</span>
+<span>Wearable Art</span>
+</a>
+<a class="drawer-nav-link flex items-center gap-4 text-secondary font-label-caps uppercase tracking-wider py-4 border-b border-surface-container-highest/60 hover:text-on-tertiary-container transition-colors duration-150" href="#shop-categories">
+<span class="material-symbols-outlined">local_mall</span>
+<span>Everyday Objects</span>
+</a>
+<a class="drawer-nav-link flex items-center gap-4 text-secondary font-label-caps uppercase tracking-wider py-4 border-b border-surface-container-highest/60 hover:text-on-tertiary-container transition-colors duration-150" href="#artwork-story">
+<span class="material-symbols-outlined">auto_stories</span>
+<span>Stories &amp; Provenance</span>
+</a>
+<a class="drawer-nav-link flex items-center gap-4 text-secondary font-label-caps uppercase tracking-wider py-4 border-b border-surface-container-highest/60 hover:text-on-tertiary-container transition-colors duration-150" href="#meet-artist">
+<span class="material-symbols-outlined">person</span>
+<span>About the Artist</span>
+</a>
+</nav>
+</div>
+<div class="pt-6 border-t border-surface-container-highest text-secondary text-caption space-y-2">
+<p class="font-label-caps uppercase tracking-widest text-primary text-[10px]">Studio Monograph Gallery</p>
+<p>Archival editions shipped globally from Berlin &amp; Copenhagen.</p>
+</div>
+</aside>
+<!-- CART SLIDE-OVER DRAWER -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" id="cart-backdrop"></div>
+<aside aria-label="Shopping Bag" class="fixed inset-y-0 right-0 w-full sm:w-96 max-w-full z-50 bg-surface-container-low border-l border-surface-container-highest shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between" id="cart-drawer">
+<!-- Cart Header -->
+<div class="p-6 border-b border-surface-container-highest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Your Bag</span>
+<span class="font-label-caps text-[11px] text-secondary bg-surface-container px-2 py-0.5" id="cart-total-badge">(2 items)</span>
+</div>
+<button aria-label="Close Cart" class="p-1 text-secondary hover:text-primary focus:outline-none" id="btn-close-cart">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Cart Items Scroll Area -->
+<div class="flex-1 overflow-y-auto p-6 space-y-5" id="cart-items-container">
+<!-- Items dynamically populated by JS -->
+</div>
+<!-- Cart Footer & Checkout -->
+<div class="p-6 bg-surface-container border-t border-surface-container-highest space-y-4">
+<div class="flex justify-between items-baseline">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider">Subtotal</span>
+<span class="font-headline-sm text-headline-sm text-primary" id="cart-subtotal-price">$265.00</span>
+</div>
+<p class="text-caption text-secondary text-[11px]">Taxes &amp; complimentary archival framing calculated at checkout.</p>
+<button class="w-full bg-primary-container text-on-primary py-3.5 px-6 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200" id="btn-checkout">
+        Proceed to Checkout
+      </button>
+<button class="w-full text-center text-secondary hover:text-primary font-label-caps text-[11px] uppercase tracking-wider underline underline-offset-4 pt-1" id="btn-continue-shopping">
+        Continue Browsing
+      </button>
+</div>
+</aside>
+<!-- QUICK VIEW MODAL -->
+<div class="fixed inset-0 bg-primary/50 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4 md:p-8" id="quickview-backdrop">
+<div class="bg-surface max-w-2xl w-full border border-surface-container-highest shadow-2xl transform scale-95 opacity-0 transition-all duration-300 max-h-[795px] overflow-y-auto" id="quickview-modal">
+<div class="relative p-6 md:p-8">
+<button aria-label="Close product preview" class="absolute top-5 right-5 text-secondary hover:text-primary" id="btn-close-quickview">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
+<!-- Modal Image Frame -->
+<div class="bg-surface-container p-4 border border-surface-container-highest flex items-center justify-center">
+<img alt="Artwork Detail" class="w-full h-72 object-cover" data-alt="Close-up detail of museum quality contemporary artwork on heavy deckle edge archival cotton rag, illuminated by warm diffuse gallery lighting, showing textured oil and mineral pigment brushstrokes with crisp tonal nuance in earthy terracotta and deep charcoal." id="qv-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKChEdXTTC0VvE1G5Oni2aonY-sUOWeLeOYT-Atw8y8yPhj7acOZhbIMIttNic6BY44SdEfeI8HIPvdO3kr1tWIVcJHHeAWfbNfps2BoLkWFwbIJGUkYuQVNREOD6QQxRDNEj3TYRJczMTsaz-qb8Alx1RJiaaBvsFg2yMvzS0J6lfpcGu8DOF4PVJAdwTjDNlHdBq1V7Ct-NOeRZWzJdz0T9hv4rQS40Wpi24a1nx8xSZR5sIp-Z9Hg"/>
+</div>
+<!-- Modal Details -->
+<div class="flex flex-col justify-between">
+<div>
+<span class="inline-block border border-surface-container-highest bg-surface-container-low px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase mb-2" id="qv-badge">Original Available</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1" id="qv-title">Elysian Resonance II</h3>
+<p class="font-body-md text-primary font-medium text-lg mb-3" id="qv-price">$145.00</p>
+<p class="font-body-sm text-body-sm text-secondary mb-5" id="qv-desc">Fine Art Print on 310gsm German Etching Cotton Rag. Pigments derived from raw natural earth minerals, hand-signed and numbered by Elena Vance.</p>
+<!-- Option Selectors -->
+<div class="mb-6">
+<label class="block font-label-caps text-label-caps uppercase text-secondary mb-2 tracking-wider">Select Size / Dimension</label>
+<div class="flex flex-wrap gap-2" id="qv-size-group">
+<button class="qv-size-btn border border-primary bg-secondary-container text-on-tertiary-container px-3 py-1.5 font-label-caps text-[11px]" type="button">12 × 16"</button>
+<button class="qv-size-btn border border-surface-container-highest bg-surface text-primary px-3 py-1.5 font-label-caps text-[11px] hover:border-primary" type="button">18 × 24"</button>
+<button class="qv-size-btn border border-surface-container-highest bg-surface text-primary px-3 py-1.5 font-label-caps text-[11px] hover:border-primary" type="button">24 × 36"</button>
+</div>
+</div>
+<!-- Archival Note -->
+<div class="border-t border-b border-surface-container-highest py-2.5 mb-6 text-caption font-caption text-secondary">
+                Includes serialized Certificate of Provenance &amp; archival seal.
+              </div>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-3 px-6 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200" id="qv-add-to-cart-btn">
+              Add to Bag
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FLOATING TOAST NOTIFICATION -->
+<div class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-primary-container text-on-primary px-5 py-3.5 shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toast-notification">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">check_circle</span>
+<div>
+<p class="font-label-caps text-[11px] uppercase tracking-wider">Added to Bag</p>
+<p class="font-body-sm text-[12px] text-surface-container-highest opacity-90" id="toast-item-name">Artwork registered to your collection.</p>
+</div>
+</div>
+<!-- MAIN CONTENT -->
+<main>
+<!-- SECTION B: HERO SECTION -->
+<section class="relative bg-surface pt-8 pb-16 md:py-24 border-b border-surface-container-highest overflow-hidden">
+<div class="max-w-7xl mx-auto px-5 md:px-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+<!-- Narrative Lead -->
+<div class="lg:col-span-6 space-y-6 md:space-y-8">
+<div class="inline-flex items-center gap-2 border border-surface-container-highest bg-surface-container-low px-3 py-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Winter 2025 Release · Curated by Elena Vance</span>
+</div>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary leading-tight">
+              Art That Lives Beyond the Canvas.
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+              Discover art prints and everyday pieces inspired by the stories, emotions, and experiences behind each creation. Crafted on archival cotton rag and sustainable organic textiles.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-2">
+<a class="bg-primary-container text-on-primary py-4 px-8 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200 text-center" href="#featured-collection">
+                Explore Collection
+              </a>
+<a class="border border-primary text-primary py-4 px-8 font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container transition-colors duration-200 text-center" href="#meet-artist">
+                Meet Elena
+              </a>
+</div>
+<!-- Archival Metadata Strip -->
+<div class="grid grid-cols-3 pt-6 border-t border-surface-container-highest gap-4">
+<div>
+<span class="block font-headline-sm text-headline-sm text-primary">310<span class="text-caption font-caption text-secondary">gsm</span></span>
+<span class="font-label-caps text-[10px] text-secondary uppercase">German Cotton Etching</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm text-primary">100<span class="text-caption font-caption text-secondary">yr+</span></span>
+<span class="font-label-caps text-[10px] text-secondary uppercase">Pigment Longevity</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm text-primary">Ltd.</span>
+<span class="font-label-caps text-[10px] text-secondary uppercase">Numbered Editions</span>
+</div>
+</div>
+</div>
+<!-- Hero Image Specimen Mount -->
+<div class="lg:col-span-6">
+<div class="relative bg-surface-container-high p-4 md:p-8 border border-surface-container-highest">
+<div class="relative overflow-hidden bg-surface-container shadow-sm border border-surface-container-highest">
+<img alt="Elysian Resonance in Gallery Space" class="w-full h-[380px] md:h-[500px] object-cover" data-alt="A grand contemporary abstract original painting hanging on an architectural, smooth textured warm ivory gallery wall. The artwork balances fluid washes of warm terracotta pigments with dense obsidian charcoal strokes and delicate atmospheric beige tones. Sunlit museum shadows fall gracefully across the floor, highlighting the rich tactile oil texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxeDuDQgpeMUSC6zqzTxIbVtYeq2V1bUxLgePCAhu2yS8SOR3PrAFB0rC68vjA2tBnsJYxOV0d_Z56YJoiafqBPZ-yHaM3k2QYfrvohe6iJRk1FXFJNvgxrrzhuX01LVrekQLo_4zl8mV0iG5mmJ8VDWsmFxGRiyUq2k7iL9qeob10SqGM2NVbIluZxXB4egi0Ulz2YUBQXDdhFovSI31ob7qnzrCzxk0VKVaLxqNiMskusjTqr6tpJg"/>
+</div>
+<!-- Curatorial Cardlet Tag -->
+<div class="mt-4 flex justify-between items-end">
+<div>
+<p class="font-headline-sm text-sm font-semibold text-primary">Elena Vance, Studio Specimen 01</p>
+<p class="font-caption text-caption text-secondary">Mineral soil pigment &amp; oil stick on raw linen</p>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary border border-surface-container-highest px-2 py-1">Berlin Archive</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION C: FEATURED COLLECTION -->
+<section class="py-16 md:py-24 bg-surface-container-low border-b border-surface-container-highest" id="featured-collection">
+<div class="max-w-7xl mx-auto px-5 md:px-16">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-tertiary-container block mb-2">Curated Catalog</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">The Collection</h2>
+</div>
+<p class="font-body-md text-secondary max-w-md">
+            Four signature works representing this season’s study into mineral color, tactile grain, and emotional permanence.
+          </p>
+</div>
+<!-- 4 Products Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+<!-- Product Card 1 -->
+<article class="product-card group bg-surface border border-surface-container-highest p-4 flex flex-col justify-between hover:border-primary transition-colors duration-200">
+<div>
+<div class="relative bg-surface-container overflow-hidden border border-surface-container-highest aspect-[4/5] mb-4">
+<img alt="Elysian Resonance II Fine Art Print" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Fine art giclee print titled Elysian Resonance II mounted on thick deckle edge cotton rag paper. Subtle warm terracotta gradients mix with layered deep charcoal textures against an ivory background, bathed in soft afternoon light in an artist studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7v8uQ3GSS4WRZMGvVKTcs998yq-VZbdyTMO6u2x7FHFvKbbs4FFc-G9GZq8UMNFDKftmdFvzdma6DhfyqrkPCf6MZbjMYaqXIqGjqGO03Sa8ka51uegUpxXEZoMDpqBoBFM4tombkO9TbgMpc9vXJUY_7bg5b4U2KBZKUHl3K8xGeLxuBif8HWW6HzUJ40dHbvKirNa_nHM7USo1V49zDEoqkxKri7hI_hXU4ceWK9wEWEMU739mUYQ"/>
+<span class="absolute top-3 left-3 bg-surface/95 border border-surface-container-highest px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase">
+                  Edition of 75
+                </span>
+<!-- Quick View Overlay Button -->
+<button class="absolute bottom-3 right-3 bg-surface/90 hover:bg-primary hover:text-on-primary text-primary p-2 border border-surface-container-highest transition-colors duration-150 flex items-center justify-center" onclick="openQuickView(1)" title="Quick View">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+<!-- Metadata Line 1 -->
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-sm text-lg font-medium text-primary">Elysian Resonance II</h3>
+<span class="font-body-md font-semibold text-primary">$145</span>
+</div>
+<!-- Metadata Line 2 -->
+<p class="font-caption text-caption text-secondary/80 mb-4">Archival Cotton Rag · 18 × 24" · 2025</p>
+</div>
+<!-- Direct Action -->
+<button class="w-full mt-2 bg-surface hover:bg-primary-container text-primary hover:text-on-primary border border-primary py-2.5 px-4 font-label-caps text-label-caps uppercase tracking-wider transition-colors duration-150" onclick="addToBag(1, 'Elysian Resonance II', 145, 'placeholder', '18 × 24”')">
+              Add to Bag
+            </button>
+</article>
+<!-- Product Card 2 -->
+<article class="product-card group bg-surface border border-surface-container-highest p-4 flex flex-col justify-between hover:border-primary transition-colors duration-200">
+<div>
+<div class="relative bg-surface-container overflow-hidden border border-surface-container-highest aspect-[4/5] mb-4">
+<img alt="Chromatics in Solitude Hoodie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High end luxury heavyweight charcoal hoodie made from dense organic French terry cotton flat lay on warm textured limestone slab. Minimalist abstract embroidered terracotta art line work runs vertically along the spine and sleeve cuff, photographed in natural soft museum lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP7KYwrsIkXQmub-Q_OFSflb6rBj6x5D5EJ3lyylivkYWSGt3K4M9FqEmsSrd6h_NbKfSWOg-GyCtSWvUGpRby7t9YJzqFxAZuj7_-D2s8PEdo0sRwLxbOaVVVA9zbYmL13DzuKkCVdlu86wxwkc8sLqI7JTR8_YVsHtoadaEIsfperm--qe9h9TErVG4u-yPwQS8c5nwYxeFxrGzRRrFn4DQll3Xarvxz_AXZUsEpPBEP-liDigfkaw"/>
+<span class="absolute top-3 left-3 bg-surface/95 border border-surface-container-highest px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase">
+                  Embroidered
+                </span>
+<button class="absolute bottom-3 right-3 bg-surface/90 hover:bg-primary hover:text-on-primary text-primary p-2 border border-surface-container-highest transition-colors duration-150 flex items-center justify-center" onclick="openQuickView(2)" title="Quick View">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-sm text-lg font-medium text-primary">Chromatics in Solitude</h3>
+<span class="font-body-md font-semibold text-primary">$120</span>
+</div>
+<p class="font-caption text-caption text-secondary/80 mb-4">Organic French Terry · 460gsm · Unisex</p>
+</div>
+<button class="w-full mt-2 bg-surface hover:bg-primary-container text-primary hover:text-on-primary border border-primary py-2.5 px-4 font-label-caps text-label-caps uppercase tracking-wider transition-colors duration-150" onclick="addToBag(2, 'Chromatics in Solitude', 120, 'placeholder', 'M (Unisex)')">
+              Add to Bag
+            </button>
+</article>
+<!-- Product Card 3 -->
+<article class="product-card group bg-surface border border-surface-container-highest p-4 flex flex-col justify-between hover:border-primary transition-colors duration-200">
+<div>
+<div class="relative bg-surface-container overflow-hidden border border-surface-container-highest aspect-[4/5] mb-4">
+<img alt="Study of Form No. 4 Print" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Monochrome architectural giclee print Study of Form No. 4 framed in natural unfinished white oak with deep matting. The minimalist organic geometric study exhibits precise tonal contrasts with hand-numbered archival ink at the bottom margin, displayed against a serene warm ivory interior wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABy8HQFDXDE1U2uQL7Jlk8ztMRN35ctq2-OTGfxm78kAEAQCko4jt1Q7cyCsoEYz30uZEvynWsr0XImqzCPNZ3OxHCxqFpKojMV1gSaCk6ZRDszmgLu4aIXfWGe1OJbOpjLRGba23b0RFa97YsEiRdrigKW2GTtMrYXsJVCAYAiSbwQnreky66RizhH_HSNc24uiVW5ls5ebb-BwV6s5vk2IHC6aYJ3q1ggjycDATYAM3nhr5HAePpQw"/>
+<span class="absolute top-3 left-3 bg-surface/95 border border-surface-container-highest px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase">
+                  Hand-Numbered
+                </span>
+<button class="absolute bottom-3 right-3 bg-surface/90 hover:bg-primary hover:text-on-primary text-primary p-2 border border-surface-container-highest transition-colors duration-150 flex items-center justify-center" onclick="openQuickView(3)" title="Quick View">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-sm text-lg font-medium text-primary">Study of Form No. 4</h3>
+<span class="font-body-md font-semibold text-primary">$95</span>
+</div>
+<p class="font-caption text-caption text-secondary/80 mb-4">Hahnemühle Matt FineArt · 12 × 16" · 2024</p>
+</div>
+<button class="w-full mt-2 bg-surface hover:bg-primary-container text-primary hover:text-on-primary border border-primary py-2.5 px-4 font-label-caps text-label-caps uppercase tracking-wider transition-colors duration-150" onclick="addToBag(3, 'Study of Form No. 4', 95, 'placeholder', '12 × 16”')">
+              Add to Bag
+            </button>
+</article>
+<!-- Product Card 4 -->
+<article class="product-card group bg-surface border border-surface-container-highest p-4 flex flex-col justify-between hover:border-primary transition-colors duration-200">
+<div>
+<div class="relative bg-surface-container overflow-hidden border border-surface-container-highest aspect-[4/5] mb-4">
+<img alt="Vessel &amp; Shadow Everyday Tote" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Durable 18oz natural duck canvas tote bag titled Vessel and Shadow resting against an artist easel in a sun-drenched sunlit studio. The tote features a screen-printed charcoal abstract charcoal sketch and reinforced copper rivets with thick organic cotton handles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjXk0YWoJABXaDFO7KCb0_sPS0m68qQrThNNV7v2GLFJGxWOFrXx5UmTNxrxzcN4UVmSMONvJ-hOxfrEH1jQqVa-nwIQhasFDgYkZ-MPyWITpXrAjUdsaNY8g-I2bjvCLSG6t5dbToBXBSQw7WTp1QOKCrFSQXmnmYLFd724dUiYpFQuBks-xBK4eg0A6ewLa-QR-unSgKHQBP-rAi0LzxmwLd29Gl9jUU1-sHNNDWn-n4IEMfDP0wOw"/>
+<span class="absolute top-3 left-3 bg-surface/95 border border-surface-container-highest px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase">
+                  Heavy Canvas
+                </span>
+<button class="absolute bottom-3 right-3 bg-surface/90 hover:bg-primary hover:text-on-primary text-primary p-2 border border-surface-container-highest transition-colors duration-150 flex items-center justify-center" onclick="openQuickView(4)" title="Quick View">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-sm text-lg font-medium text-primary">Vessel &amp; Shadow</h3>
+<span class="font-body-md font-semibold text-primary">$48</span>
+</div>
+<p class="font-caption text-caption text-secondary/80 mb-4">18oz Duck Canvas · Double Gusset · Washable</p>
+</div>
+<button class="w-full mt-2 bg-surface hover:bg-primary-container text-primary hover:text-on-primary border border-primary py-2.5 px-4 font-label-caps text-label-caps uppercase tracking-wider transition-colors duration-150" onclick="addToBag(4, 'Vessel &amp; Shadow', 48, 'placeholder', 'Standard Tote')">
+              Add to Bag
+            </button>
+</article>
+</div>
+</div>
+</section>
+<!-- SECTION D: SHOP BY CATEGORY -->
+<section class="py-16 md:py-24 bg-surface border-b border-surface-container-highest" id="shop-categories">
+<div class="max-w-7xl mx-auto px-5 md:px-16">
+<div class="mb-12">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-tertiary-container block mb-2">Curatorial Mediums</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Shop by Category</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+<!-- Category 1 -->
+<div class="group relative bg-surface-container-high border border-surface-container-highest p-6 md:p-8 flex flex-col justify-between hover:border-primary transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container border border-surface-container-highest mb-6">
+<img alt="Art Prints Category" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Archival fine art printing press in a bright studio with fresh prints drying on drying racks, sheets of textured heavy German etching cotton rag paper visible in sharp focus, bathed in serene soft ambient morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtRAO926Uk9GjLWWHiiN0Or6rxjqSU7d_IZBRUpmQDySihSQ9zxhutH1QTMZnNUL9h9tfY9ffcQ--d8p-YXTC87uIctAuAaO9RBv3my2v2HGRPQkW9Ae1ywv2y-ptyG-l35LmX9Ydb14LgUwBcWS_o_Sk3CM0u7BMASJgpojZDSLYMv2qazFFmCqVqE2dWrhtfuTiLCVJA80Zla4mRQQeRD3t2M9iJtd0meceMoSnn4KrIsIurlRM_uQ"/>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Medium 01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">Art Prints</h3>
+<p class="font-body-md text-secondary mb-6">Bring the artwork into your space with museum-grade cotton rag giclée editions.</p>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-wider text-primary border-b border-primary pb-1 group-hover:text-on-tertiary-container group-hover:border-on-tertiary-container transition-colors duration-150" href="#featured-collection">
+                Explore Prints
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="group relative bg-surface-container-high border border-surface-container-highest p-6 md:p-8 flex flex-col justify-between hover:border-primary transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container border border-surface-container-highest mb-6">
+<img alt="Wearable Art Category" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Model dressed in a minimal charcoal organic French terry heavyweight art hoodie, standing quietly in an airy contemporary sculpture garden bathed in subtle overcast daylight, conveying elevated quiet luxury minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrr_56_4IJBAbgLotSRkcoZIDxygELE03bMkAA1LvIX9Ac49gHe2dVvz5LHFWoDOXKVVkUdaFQKizEXIoOebOEO9DTEm7tqUgcqT9SAXOlKLdyKdsEVsarrrXF6k8lYyD9hExUtlEyMYUgDwrikCBkx39pozlnyganfNyKnzposOozwhdw56yGjEWyJAjfOexrxotAQ2lZndezjclwRe6PlckCkzOwZ2a4BzPQ39Rs4179kOR0aJ9aSw"/>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Medium 02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">Wearable Art</h3>
+<p class="font-body-md text-secondary mb-6">Carry the art with you. Ethically constructed heavyweight garments with embroidered motifs.</p>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-wider text-primary border-b border-primary pb-1 group-hover:text-on-tertiary-container group-hover:border-on-tertiary-container transition-colors duration-150" href="#featured-collection">
+                Shop Apparel
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="group relative bg-surface-container-high border border-surface-container-highest p-6 md:p-8 flex flex-col justify-between hover:border-primary transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container border border-surface-container-highest mb-6">
+<img alt="Everyday Objects Category" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Curated collection of everyday artist objects including a heavy canvas tote, handmade ceramic brush cup, and linen bound sketch notebook arranged on a pale ash wood work table with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuxRyEKf2imz5AQy2ww6JxvTVcfuQ_asqt0mtXVxyk2UadNzQmLmYM0U2fchgImrs8pTN_t19_9lygIjRUz-QgPpBJhN4OBHslEeoPhTw7xuWpFwATPxajgUwHWwLk77-Em1zesk4z2fwVNMfgPiLoNn2i_IHH7v1MKHeigXoIMSN4PVz_IhzSahNamg2cfaBDnJXw41rbW2pfpEdA7MtcPqfsVuz0Caj9D6U__qdQ3SpSqpJz2b23hQ"/>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Medium 03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">Everyday Objects</h3>
+<p class="font-body-md text-secondary mb-6">Art-inspired pieces for everyday living, built with rugged textiles and tactile intention.</p>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-wider text-primary border-b border-primary pb-1 group-hover:text-on-tertiary-container group-hover:border-on-tertiary-container transition-colors duration-150" href="#featured-collection">
+                Discover More
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION E: FEATURED ARTWORK STORY -->
+<section class="py-16 md:py-24 bg-surface-container-low border-b border-surface-container-highest" id="artwork-story">
+<div class="max-w-7xl mx-auto px-5 md:px-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+<!-- Large Artwork Showcase with Framing -->
+<div class="lg:col-span-7">
+<div class="bg-surface p-4 md:p-8 border border-surface-container-highest">
+<div class="relative overflow-hidden bg-surface-container border border-surface-container-highest">
+<img alt="Elysian Resonance II Macro Story Detail" class="w-full h-[400px] md:h-[540px] object-cover" data-alt="Intense macro detail of the painting Elysian Resonance II showing textural layered mineral pigments of raw burnt sienna, deep soot charcoal, and warm titanium cream applied with a vintage palette knife on thick Italian linen. Studio window lighting emphasizes the physical ridges of paint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvWUrTOZKd7nRqtnl3w18qA2bMyo8qhmZIMW4-7HxXnOTaIhxFMVJTj4-QdC3LMD27MDB6F6wBogFplH9oMqBjlQmMDDgfi5SpcnvGjYZ4bVtaTc_SL2bcRfekjC4CBfGgqpDx38EgcSeuqSIpn270EiwGghxlVQSEx2RLBXRkRMVYFFB48psegsSOm5s3xVtDtQUCCnarx0YpBTSwQ-NzY-lIKy4FGHAmg6kYycCqGUAxlP_eCEbjkg"/>
+</div>
+<div class="mt-4 flex justify-between items-center text-caption text-secondary">
+<span>Pigment Analysis: Tuscan Red Ochre + Raw Umber</span>
+<span>Original Painted in Berlin Studio</span>
+</div>
+</div>
+</div>
+<!-- Deep Narrative Column -->
+<div class="lg:col-span-5 space-y-6">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-tertiary-container">Provenance &amp; Process</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+              More Than an Image. A Story.
+            </h2>
+<div class="space-y-4 font-body-md text-secondary">
+<p>
+<em class="font-headline-sm text-primary text-base">Elysian Resonance II</em> emerged over three consecutive midnight sessions in the dead of winter. Elena began without preliminary sketches, letting raw earthen pigments and aged walnut oil dictate the cadence of each stroke.
+              </p>
+<p>
+                The deep terracotta tones are formulated from authentic Tuscan red ochre mixed directly on the studio marble slab, producing an acoustic vibration of color impossible to replicate with commercial synthetic tubes.
+              </p>
+</div>
+<!-- Certificate Specification Card -->
+<div class="border-t border-b border-surface-container-highest py-4 space-y-2">
+<h4 class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Certificate of Authenticity</h4>
+<p class="font-caption text-secondary leading-relaxed">
+                Every print includes an individual embossed certificate stamped with Elena Vance’s monogram signet, hand-numbered edition tally, and archival registration QR code.
+              </p>
+</div>
+<div>
+<button class="bg-primary-container text-on-primary py-3.5 px-8 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200" onclick="addToBag(1, 'Elysian Resonance II', 145, 'placeholder', '18 × 24”')">
+                Acquire Elysian Resonance II — $145
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION F: THE ART IN REAL LIFE -->
+<section class="py-16 md:py-24 bg-surface border-b border-surface-container-highest">
+<div class="max-w-7xl mx-auto px-5 md:px-16">
+<div class="max-w-2xl mb-12">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-tertiary-container block mb-2">Living With Art</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Made to Be Lived With.</h2>
+<p class="font-body-md text-secondary mt-3">
+            Glimpses into private residences, personal libraries, and daily journeys where Studio Monograph works establish emotional grounding.
+          </p>
+</div>
+<!-- Curated Editorial Photo Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-4">
+<div class="bg-surface-container p-3 border border-surface-container-highest">
+<img alt="Print in Scandinavian Living Space" class="w-full h-80 object-cover" data-alt="Elena Vance framed artwork hanging in an elegant modern Scandinavian architectural dining room with warm limestone walls, minimalist white oak table, and soft natural sunlight filtering through linen curtains." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmSqI3E1v0JMhzB4E_M1JCc3wW-pbxcxZk0PgKmRN1rqWacV07CAQP2qQKRYIL28FocPr8v3meLzEqRMGiSTUvWfOy_Smlf5ELGZTqaUlea1JTke97ChVpDJ0tao2_kvcimqn03sPzeVEmMiYB-XCngJ1wo2yDljJ9d4v9pLj9tqot2VHMvJLQjyH-nN7uQOeZJm0q2SZ5SRwavLpdl-IYMg46yXLeIMSqRvMNosY88TvaE-4dTCnymg"/>
+</div>
+<p class="font-caption text-caption text-secondary">
+<strong class="text-primary font-medium">Residence No. 12, Zurich</strong> — Elysian Resonance II paired with untreated oak.
+            </p>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container p-3 border border-surface-container-highest">
+<img alt="Collector Wearing Embroidered Hoodie" class="w-full h-80 object-cover" data-alt="A creative professional sitting at an outdoor terrace cafe reading an art book, wearing the Studio Monograph heavyweight charcoal art hoodie with understated embroidered spine detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV98SyTK6S9CebBnMCGEOgE5h6S-oVpZHohtPKXwT-9mgsnuWWTYBSvm3j7TJrBgyNndqDMM1yQGfox2eNJ63FliR3yuttxXcQBe6vVNZzBmChPVJAGSehQIqdlwb4fdC5rydIC-LpNaqBmsoSuGBqByZB53RyfT0vTaw1bouDaZXsGzHzuKEVeWhyx-22EiU9vpZauOGuaKezBn91VS4pU-S-9BBqA0-CO4hndLV3QN8O21Scy2KdWQ"/>
+</div>
+<p class="font-caption text-caption text-secondary">
+<strong class="text-primary font-medium">Paris Marais</strong> — Chromatics hoodie in daily motion.
+            </p>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container p-3 border border-surface-container-highest">
+<img alt="Unboxing with Archival Wax Seal" class="w-full h-80 object-cover" data-alt="Unboxing moment of fine art print on table with heavy unbleached tissue wrap, handmade botanical wax seal stamped with artist cipher, and hand-signed archival cotton certificate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdcVZpZqvvPbdtGGb0Xe44BXaRUu4EpCx2gxo46bbaD5zQc4rC0VFSnX4jRXGfOILuIjfVTi0BGz3NYnURN3xfs-mUas1Tf2fiUBYn0oV2bW25kREK7-E1Cf6wgB7UJZoOytMIEzrPw-b8fhd_Oz6ZBBannzAzeHVzZnujV4bxBB5Inlv4iWlqqnxZ67zLyLIFoyp167_Hx2fAJJlsooo5TWsVxaEUbl_jdc-pZMoHqfIULsvHKAUUlQ"/>
+</div>
+<p class="font-caption text-caption text-secondary">
+<strong class="text-primary font-medium">Archival Packaging</strong> — Sealed with hand-poured terracotta beeswax.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION G: WHY COLLECT THIS ART? -->
+<section class="py-16 md:py-24 bg-surface-container-low border-b border-surface-container-highest">
+<div class="max-w-7xl mx-auto px-5 md:px-16">
+<div class="text-center max-w-xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-tertiary-container block mb-2">Integrity &amp; Standards</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Values &amp; Craft</h2>
+<p class="font-body-md text-secondary mt-3">Every creation upholds strict museum-level integrity from first pigment grind to delivery.</p>
+</div>
+<!-- 4 Clean Trust Markers -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-surface p-6 border border-surface-container-highest flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 mb-4 bg-surface-container flex items-center justify-center border border-surface-container-highest text-primary">
+<span class="material-symbols-outlined">brush</span>
+</div>
+<h3 class="font-headline-sm text-base font-semibold text-primary mb-2">Studio Originality</h3>
+<p class="font-body-sm text-secondary">Independent, unhurried studio practice. No mass licensing, generic reproductions, or third-party drop-shipping.</p>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mt-6 block border-t border-surface-container-highest pt-2">Direct Artist Support</span>
+</div>
+<div class="bg-surface p-6 border border-surface-container-highest flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 mb-4 bg-surface-container flex items-center justify-center border border-surface-container-highest text-primary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<h3 class="font-headline-sm text-base font-semibold text-primary mb-2">Museum-Grade Giclée</h3>
+<p class="font-body-sm text-secondary">Printed on 310gsm archival 100% cotton rag with 12-color mineral pigment inks guaranteed for 100+ years lightfastness.</p>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mt-6 block border-t border-surface-container-highest pt-2">Archival Cotton Rag</span>
+</div>
+<div class="bg-surface p-6 border border-surface-container-highest flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 mb-4 bg-surface-container flex items-center justify-center border border-surface-container-highest text-primary">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<h3 class="font-headline-sm text-base font-semibold text-primary mb-2">Ethical Manufacturing</h3>
+<p class="font-body-sm text-secondary">Garments made from GOTS-certified organic French terry cotton, dyed in closed-loop water treatment facilities.</p>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mt-6 block border-t border-surface-container-highest pt-2">Zero Plastic Fibers</span>
+</div>
+<div class="bg-surface p-6 border border-surface-container-highest flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 mb-4 bg-surface-container flex items-center justify-center border border-surface-container-highest text-primary">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<h3 class="font-headline-sm text-base font-semibold text-primary mb-2">Carbon-Neutral Delivery</h3>
+<p class="font-body-sm text-secondary">Reinforced custom archival flat-packs with recycled glassine paper and certified carbon offsets on all global freight.</p>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mt-6 block border-t border-surface-container-highest pt-2">Worldwide Guaranteed</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION H: MEET THE ARTIST -->
+<section class="py-16 md:py-24 bg-surface border-b border-surface-container-highest" id="meet-artist">
+<div class="max-w-7xl mx-auto px-5 md:px-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+<!-- Artist Studio Portrait -->
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="bg-surface-container p-4 border border-surface-container-highest">
+<div class="overflow-hidden border border-surface-container-highest">
+<img alt="Elena Vance in her studio" class="w-full h-[460px] object-cover" data-alt="Intimate editorial studio portrait of contemporary artist Elena Vance sitting quietly on a wooden painter's stool beside large unstretched canvases, holding a natural bristle brush in her studio bathed in warm natural afternoon window lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5B2bb4Xtue4ZIix_d1gRozMvRqNG6FpTfEHl9rF7h7zB-k6RI0Cg0sLOXlxeFz6G2bgxgFkm5XC2yWWnrLb8cU2MLdlwt6QN715ZrIgwAE5ytXCcpQBA89a-MyId3rUkvwZRtRPggzRCORF2Wr8Wr5QoCH_JBuB2L2vP76hpUkDJRasCK9AuXKjV4qt27JwG83eN65NqM0xVJQ5bitjuI_8wkmV1cVI067qkWp4XOosdTLat-TdPr_g"/>
+</div>
+<p class="font-caption text-caption text-secondary mt-3 text-center">Elena Vance in her Kreuzberg studio, 2025</p>
+</div>
+</div>
+<!-- Artist Statement & Signature -->
+<div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-tertiary-container">The Hand Behind The Work</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Elena Vance</h2>
+<div class="space-y-4 font-body-lg text-secondary">
+<p>
+                “I create work for people who seek stillness inside chaotic cities. My paintings are not decorative statements; they are physical traces of quiet moments, layered with mineral soils that have existed on this earth for millennia.”
+              </p>
+<p>
+                Trained in traditional mural conservation in Florence and contemporary mixed media in Berlin, Elena founded Studio Monograph to bridge the historic integrity of museum publishing with the lived warmth of everyday spaces.
+              </p>
+</div>
+<!-- Signature Touch -->
+<div class="pt-4 flex items-center gap-6">
+<div class="font-headline-sm italic text-2xl text-primary tracking-wide border-b border-secondary/40 pb-1">
+                Elena Vance
+              </div>
+<span class="font-label-caps text-[11px] text-secondary uppercase tracking-widest">Berlin · Principal Artist</span>
+</div>
+<!-- Provenance Ledger Specs -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-surface-container-highest">
+<div>
+<span class="block font-headline-sm text-base text-primary">12+ Years</span>
+<span class="font-caption text-secondary">Studio Practice</span>
+</div>
+<div>
+<span class="block font-headline-sm text-base text-primary">48 Works</span>
+<span class="font-caption text-secondary">Catalogued Raisonné</span>
+</div>
+<div>
+<span class="block font-headline-sm text-base text-primary">34 Countries</span>
+<span class="font-caption text-secondary">Private Collectors</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION I: NEWSLETTER SIGNUP -->
+<section class="py-16 md:py-20 bg-surface-container border-b border-surface-container-highest">
+<div class="max-w-3xl mx-auto px-5 md:px-8 text-center space-y-6">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-tertiary-container block">Private Collector Circle</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Stay Close to the Art.</h2>
+<p class="font-body-md text-secondary max-w-xl mx-auto">
+          Receive quiet dispatch notices when new archival editions are released, read private essays on studio pigment trials, and gain 24-hour priority preview access.
+        </p>
+<!-- Newsletter Form -->
+<form class="mt-6 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+<input class="flex-1 bg-surface border border-surface-container-highest px-4 py-3 font-body-sm text-primary placeholder-secondary focus:border-primary focus:outline-none transition-colors" id="newsletter-email" placeholder="Enter your email address" required="" type="email"/>
+<button class="bg-primary-container text-on-primary px-6 py-3 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200" type="submit">
+            Join Registry
+          </button>
+</form>
+<p class="font-caption text-caption text-secondary mt-2" id="newsletter-status">
+          Dispatched roughly four times per year. Strictly no retail spam.
+        </p>
+</div>
+</section>
+</main>
+<!-- SECTION J: FOOTER -->
+<footer class="w-full bg-surface-container-high border-t border-surface-container-highest">
+<div class="w-full px-6 py-16 md:px-16 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<!-- Brand & Philosophy -->
+<div class="space-y-4 max-w-sm">
+<span class="text-headline-md font-headline-md text-primary tracking-wider uppercase block">STUDIO MONOGRAPH</span>
+<p class="font-body-sm text-body-sm text-secondary">
+          An archival publishing salon and working contemporary atelier led by Elena Vance. Committed to material permanence and unhurried design.
+        </p>
+<div class="pt-2 flex items-center gap-4">
+<a class="font-label-caps text-label-caps uppercase text-primary hover:text-on-tertiary-container transition-colors" href="#">Instagram</a>
+<span class="text-secondary">·</span>
+<a class="font-label-caps text-label-caps uppercase text-primary hover:text-on-tertiary-container transition-colors" href="#">Substack</a>
+<span class="text-secondary">·</span>
+<a class="font-label-caps text-label-caps uppercase text-primary hover:text-on-tertiary-container transition-colors" href="#">Artsy</a>
+</div>
+</div>
+<!-- Links Cluster 1 -->
+<div class="space-y-3">
+<h4 class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Catalog &amp; Archival</h4>
+<ul class="space-y-2 text-body-sm text-secondary">
+<li><a class="hover:text-on-tertiary-container underline underline-offset-4 transition-colors duration-150" href="#">Catalogue Raisonné</a></li>
+<li><a class="hover:text-on-tertiary-container underline underline-offset-4 transition-colors duration-150" href="#">Edition Integrity</a></li>
+<li><a class="hover:text-on-tertiary-container underline underline-offset-4 transition-colors duration-150" href="#">Pigment Provenance</a></li>
+<li><a class="hover:text-on-tertiary-container underline underline-offset-4 transition-colors duration-150" href="#">Framing Specifications</a></li>
+</ul>
+</div>
+<!-- Links Cluster 2 -->
+<div class="space-y-3">
+<h4 class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Client Services</h4>
+<ul class="space-y-2 text-body-sm text-secondary">
+<li><a class="hover:text-on-tertiary-container underline underline-offset-4 transition-colors duration-150" href="#">Shipping &amp; Framing</a></li>
+<li><a class="hover:text-on-tertiary-container underline underline-offset-4 transition-colors duration-150" href="#">Client Inquiries</a></li>
+<li><a class="hover:text-on-tertiary-container underline underline-offset-4 transition-colors duration-150" href="#">Terms of Acquisition</a></li>
+<li><a class="hover:text-on-tertiary-container underline underline-offset-4 transition-colors duration-150" href="#">Private Appointments</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright Sub-bar -->
+<div class="border-t border-surface-container-highest px-6 md:px-16 py-6 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-caption text-secondary">
+<p>© 2025 STUDIO MONOGRAPH. ALL RIGHTS RESERVED. ARCHIVAL CERTIFICATES ISSUED WITH EVERY PIECE.</p>
+<p>Elena Vance Studio · Berlin · Copenhagen</p>
+</div>
+</footer>
+<!-- JAVASCRIPT STATE MANAGEMENT -->
+<script>
+    // Product Database for QuickView & Cart Operations
+    const PRODUCTS = {
+      1: {
+        id: 1,
+        title: "Elysian Resonance II",
+        price: 145,
+        badge: "Limited Edition of 75",
+        desc: "Fine Art Print on 310gsm German Etching Cotton Rag. Pigments derived from raw Tuscan earth minerals, hand-signed and numbered by Elena Vance.",
+        imgAlt: "Close-up detail of museum quality contemporary artwork on heavy deckle edge archival cotton rag, illuminated by warm diffuse gallery lighting, showing textured oil and mineral pigment brushstrokes with crisp tonal nuance in earthy terracotta and deep charcoal.",
+        options: ["12 × 16”", "18 × 24”", "24 × 36”"]
+      },
+      2: {
+        id: 2,
+        title: "Chromatics in Solitude",
+        price: 120,
+        badge: "Heavyweight French Terry",
+        desc: "460gsm organic unbrushed cotton hoodie. Featuring custom needle-stitch embroidery of Vance's continuous contour line work along the sleeve and back yoke.",
+        imgAlt: "High end luxury heavyweight charcoal hoodie made from dense organic French terry cotton flat lay on warm textured limestone slab. Minimalist abstract embroidered terracotta art line work runs vertically along the spine and sleeve cuff, photographed in natural soft museum lighting.",
+        options: ["S (Unisex)", "M (Unisex)", "L (Unisex)", "XL (Unisex)"]
+      },
+      3: {
+        id: 3,
+        title: "Study of Form No. 4",
+        price: 95,
+        badge: "Giclée Hand-Numbered",
+        desc: "Archival pigment print on Hahnemühle Matt paper. Hand-numbered edition of 150 with verified registry stamp and embossed blind artist seal.",
+        imgAlt: "Monochrome architectural giclee print Study of Form No. 4 framed in natural unfinished white oak with deep matting. The minimalist organic geometric study exhibits precise tonal contrasts with hand-numbered archival ink at the bottom margin, displayed against a serene warm ivory interior wall.",
+        options: ["8 × 10”", "12 × 16”", "16 × 20”"]
+      },
+      4: {
+        id: 4,
+        title: "Vessel & Shadow",
+        price: 48,
+        badge: "18oz Heavy Duck Canvas",
+        desc: "Durable everyday tote bag screen-printed with solvent-free waterbased ink. Solid brass rivets, double reinforced base, and interior key carabiner.",
+        imgAlt: "Durable 18oz natural duck canvas tote bag titled Vessel and Shadow resting against an artist easel in a sun-drenched sunlit studio. The tote features a screen-printed charcoal abstract charcoal sketch and reinforced copper rivets with thick organic cotton handles.",
+        options: ["Standard Tote"]
+      }
+    };
+
+    // Pre-populated Cart State
+    let cart = [
+      {
+        id: 1,
+        title: "Elysian Resonance II",
+        price: 145,
+        variant: "18 × 24”",
+        quantity: 1,
+        imageAlt: PRODUCTS[1].imgAlt
+      },
+      {
+        id: 2,
+        title: "Chromatics in Solitude",
+        price: 120,
+        variant: "M (Unisex)",
+        quantity: 1,
+        imageAlt: PRODUCTS[2].imgAlt
+      }
+    ];
+
+    let currentQuickViewProduct = null;
+    let selectedQuickViewVariant = "";
+
+    // DOM Elements
+    const navDrawer = document.getElementById('nav-drawer');
+    const drawerBackdrop = document.getElementById('drawer-backdrop');
+    const btnOpenDrawer = document.getElementById('btn-open-drawer');
+    const btnCloseDrawer = document.getElementById('btn-close-drawer');
+
+    const cartDrawer = document.getElementById('cart-drawer');
+    const cartBackdrop = document.getElementById('cart-backdrop');
+    const btnOpenCart = document.getElementById('btn-open-cart');
+    const btnCloseCart = document.getElementById('btn-close-cart');
+    const btnContinueShopping = document.getElementById('btn-continue-shopping');
+    const cartItemsContainer = document.getElementById('cart-items-container');
+    const cartSubtotalPrice = document.getElementById('cart-subtotal-price');
+    const cartTotalBadge = document.getElementById('cart-total-badge');
+    const headerCartBadge = document.getElementById('header-cart-badge');
+    const btnCheckout = document.getElementById('btn-checkout');
+
+    const quickviewBackdrop = document.getElementById('quickview-backdrop');
+    const quickviewModal = document.getElementById('quickview-modal');
+    const btnCloseQuickview = document.getElementById('btn-close-quickview');
+    const qvTitle = document.getElementById('qv-title');
+    const qvPrice = document.getElementById('qv-price');
+    const qvBadge = document.getElementById('qv-badge');
+    const qvDesc = document.getElementById('qv-desc');
+    const qvImage = document.getElementById('qv-image');
+    const qvSizeGroup = document.getElementById('qv-size-group');
+    const qvAddToCartBtn = document.getElementById('qv-add-to-cart-btn');
+
+    const toast = document.getElementById('toast-notification');
+    const toastItemName = document.getElementById('toast-item-name');
+
+    // Drawer Handling
+    function openNavDrawer() {
+      drawerBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      navDrawer.classList.remove('-translate-x-full');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeNavDrawer() {
+      drawerBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      navDrawer.classList.add('-translate-x-full');
+      document.body.style.overflow = '';
+    }
+
+    btnOpenDrawer.addEventListener('click', openNavDrawer);
+    btnCloseDrawer.addEventListener('click', closeNavDrawer);
+    drawerBackdrop.addEventListener('click', closeNavDrawer);
+
+    document.querySelectorAll('.drawer-nav-link').forEach(link => {
+      link.addEventListener('click', closeNavDrawer);
+    });
+
+    // Cart Drawer Handling
+    function openCart() {
+      renderCart();
+      cartBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      cartDrawer.classList.remove('translate-x-full');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+      cartBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      cartDrawer.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+    }
+
+    btnOpenCart.addEventListener('click', openCart);
+    btnCloseCart.addEventListener('click', closeCart);
+    btnContinueShopping.addEventListener('click', closeCart);
+    cartBackdrop.addEventListener('click', closeCart);
+
+    // Cart State & Render Engine
+    function renderCart() {
+      const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      // Update counters
+      headerCartBadge.textContent = totalCount;
+      cartTotalBadge.textContent = `(${totalCount} item${totalCount === 1 ? '' : 's'})`;
+      cartSubtotalPrice.textContent = `$${subtotal.toFixed(2)}`;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="h-64 flex flex-col items-center justify-center text-center p-6 space-y-3">
+            <span class="material-symbols-outlined text-[36px] text-secondary">shopping_bag</span>
+            <p class="font-headline-sm text-base text-primary">Your bag is empty.</p>
+            <p class="font-caption text-secondary">Explore prints and editions to start your collection.</p>
+          </div>
+        `;
+        btnCheckout.disabled = true;
+        btnCheckout.classList.add('opacity-50', 'cursor-not-allowed');
+        return;
+      }
+
+      btnCheckout.disabled = false;
+      btnCheckout.classList.remove('opacity-50', 'cursor-not-allowed');
+
+      cartItemsContainer.innerHTML = cart.map((item, index) => `
+        <div class="flex gap-4 pb-5 border-b border-surface-container-highest">
+          <div class="w-16 h-20 bg-surface-container border border-surface-container-highest flex-shrink-0 overflow-hidden">
+            <img src="placeholder" data-alt="${item.imageAlt}" class="w-full h-full object-cover" alt="${item.title}">
+          </div>
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start">
+                <h4 class="font-headline-sm text-sm text-primary font-medium">${item.title}</h4>
+                <button onclick="removeCartItem(${index})" class="text-secondary hover:text-error text-caption p-1">
+                  <span class="material-symbols-outlined text-[16px]">close</span>
+                </button>
+              </div>
+              <p class="font-caption text-secondary text-[11px]">${item.variant}</p>
+            </div>
+            
+            <div class="flex justify-between items-center mt-2">
+              <div class="flex items-center border border-surface-container-highest bg-surface">
+                <button onclick="updateCartQuantity(${index}, -1)" class="px-2 py-0.5 text-secondary hover:text-primary text-xs">-</button>
+                <span class="px-2 font-label-caps text-xs">${item.quantity}</span>
+                <button onclick="updateCartQuantity(${index}, 1)" class="px-2 py-0.5 text-secondary hover:text-primary text-xs">+</button>
+              </div>
+              <span class="font-body-sm font-semibold text-primary text-sm">$${(item.price * item.quantity).toFixed(2)}</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateCartQuantity(index, delta) {
+      if (!cart[index]) return;
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      renderCart();
+    }
+
+    function removeCartItem(index) {
+      if (cart[index]) {
+        cart.splice(index, 1);
+        renderCart();
+      }
+    }
+
+    function addToBag(productId, title, price, img, variant) {
+      const existing = cart.find(item => item.id === productId && item.variant === variant);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        const prod = PRODUCTS[productId];
+        cart.push({
+          id: productId,
+          title: title || prod.title,
+          price: price || prod.price,
+          variant: variant || prod.options[0],
+          quantity: 1,
+          imageAlt: prod ? prod.imgAlt : ""
+        });
+      }
+
+      renderCart();
+      showToast(`${title || 'Artwork'} added to bag.`);
+    }
+
+    // Quick View Modal System
+    function openQuickView(productId) {
+      const prod = PRODUCTS[productId];
+      if (!prod) return;
+      currentQuickViewProduct = prod;
+      selectedQuickViewVariant = prod.options[0];
+
+      qvTitle.textContent = prod.title;
+      qvPrice.textContent = `$${prod.price}.00`;
+      qvBadge.textContent = prod.badge;
+      qvDesc.textContent = prod.desc;
+      qvImage.setAttribute('data-alt', prod.imgAlt);
+
+      // Render size pills
+      qvSizeGroup.innerHTML = prod.options.map((opt, i) => `
+        <button 
+          type="button" 
+          onclick="selectQuickViewVariant('${opt}', this)" 
+          class="qv-size-btn border ${i === 0 ? 'border-primary bg-secondary-container text-on-tertiary-container' : 'border-surface-container-highest bg-surface text-primary'} px-3 py-1.5 font-label-caps text-[11px] hover:border-primary transition-colors"
+        >
+          ${opt}
+        </button>
+      `).join('');
+
+      // Open Modal
+      quickviewBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      quickviewModal.classList.remove('scale-95', 'opacity-0');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function selectQuickViewVariant(variantName, element) {
+      selectedQuickViewVariant = variantName;
+      document.querySelectorAll('.qv-size-btn').forEach(btn => {
+        btn.className = 'qv-size-btn border border-surface-container-highest bg-surface text-primary px-3 py-1.5 font-label-caps text-[11px] hover:border-primary transition-colors';
+      });
+      element.className = 'qv-size-btn border border-primary bg-secondary-container text-on-tertiary-container px-3 py-1.5 font-label-caps text-[11px] transition-colors';
+    }
+
+    function closeQuickView() {
+      quickviewBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      quickviewModal.classList.add('scale-95', 'opacity-0');
+      document.body.style.overflow = '';
+      currentQuickViewProduct = null;
+    }
+
+    btnCloseQuickview.addEventListener('click', closeQuickView);
+    quickviewBackdrop.addEventListener('click', (e) => {
+      if (e.target === quickviewBackdrop) closeQuickView();
+    });
+
+    qvAddToCartBtn.addEventListener('click', () => {
+      if (currentQuickViewProduct) {
+        addToBag(
+          currentQuickViewProduct.id,
+          currentQuickViewProduct.title,
+          currentQuickViewProduct.price,
+          'placeholder',
+          selectedQuickViewVariant
+        );
+        closeQuickView();
+      }
+    });
+
+    // Toast Notification System
+    let toastTimeout = null;
+    function showToast(message) {
+      toastItemName.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+      
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+      }, 3200);
+    }
+
+    // Checkout Simulation
+    btnCheckout.addEventListener('click', () => {
+      if (cart.length === 0) return;
+      alert(`Initializing secure archival acquisition for $${cart.reduce((s, i) => s + (i.price * i.quantity), 0).toFixed(2)}. In a production store, you will be directed to Stripe / Klarna checkout.`);
+    });
+
+    // Newsletter Submission Simulation
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('newsletter-email');
+      const status = document.getElementById('newsletter-status');
+      
+      if (input.value && input.checkValidity()) {
+        const email = input.value;
+        input.value = '';
+        status.innerHTML = `<span class="text-on-tertiary-container font-medium">Thank you. ${email} has been added to Elena Vance’s private collector registry.</span>`;
+        showToast("Collector invitation confirmed.");
+      }
+    }
+
+    // Initial render call on load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCart();
+    });
+  </script>
+</body></html>
