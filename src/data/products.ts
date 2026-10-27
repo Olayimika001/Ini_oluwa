@@ -13,7 +13,7 @@ function work(
     title,
     price,
     printPrice: 50,
-    // badge: 'Original & Signed Print',
+    badge: 'Original & Signed Print',
     medium,
     specs: `${material} · ${size} · 2026`,
     desc: `Original work by Ini Oluwa from the 2026 selected works catalogue (${material}; ${size}). Signed prints are available for each painting at $50 each.`,
