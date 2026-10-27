@@ -27,11 +27,11 @@ function orderFeaturedPrint() {
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
         <div class="lg:col-span-7">
           <div class="bg-surface p-4 md:p-8 border border-surface-container-highest">
-            <div class="relative overflow-hidden bg-surface-container border border-surface-container-highest">
+            <div class="relative bg-surface-container border border-surface-container-highest">
               <img
                 src="/catalogue/works/work-01.jpg"
                 alt="Ìfẹnukonu III by Ini Oluwa"
-                class="w-full h-[400px] md:h-[540px] object-cover object-top"
+                class="w-full object-contain"
               />
             </div>
             <div class="mt-4 flex justify-between items-center text-caption text-secondary">

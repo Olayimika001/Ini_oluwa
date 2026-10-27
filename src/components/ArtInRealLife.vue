@@ -46,7 +46,7 @@ const editorialPhotos = [
             <img
               :src="photo.imgSrc"
               :alt="photo.imgAlt"
-              class="w-full h-80 object-cover object-top"
+              class="w-full object-contain"
             />
           </div>
           <p class="font-caption text-caption text-secondary">

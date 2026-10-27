@@ -16,7 +16,7 @@ const stats = [
               <img
                 src="/catalogue/artist.jpg"
                 alt="Ini Oluwa"
-                class="w-full h-[460px] object-cover object-top"
+                class="w-full object-contain"
               />
             </div>
             <p class="font-caption text-caption text-secondary mt-3 text-center">

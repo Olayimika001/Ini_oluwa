@@ -44,7 +44,7 @@
             </div>
             <div>
               <span class="block font-headline-sm text-headline-sm text-primary">$50</span>
-              <span class="font-label-caps text-[10px] text-on-tertiary-container uppercase font-semibold">Signed Prints ($50)</span>
+              <span class="font-label-caps text-[10px] text-on-tertiary-container uppercase font-semibold">Signed Prints</span>
             </div>
             <div>
               <span class="block font-headline-sm text-headline-sm text-primary">Ink</span>
@@ -59,11 +59,11 @@
 
         <div class="lg:col-span-6">
           <div class="relative bg-surface-container-high p-4 md:p-8 border border-surface-container-highest">
-            <div class="relative overflow-hidden bg-surface-container shadow-sm border border-surface-container-highest">
+            <div class="relative bg-surface-container shadow-sm border border-surface-container-highest">
               <img
                 src="/catalogue/works/work-01.jpg"
                 alt="Ìfẹnukonu III by Ini Oluwa"
-                class="w-full h-[380px] md:h-[500px] object-cover object-top"
+                class="w-full object-contain"
               />
             </div>
             <div class="mt-4 flex justify-between items-end">

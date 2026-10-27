@@ -9,7 +9,7 @@ const values = [
   {
     icon: 'palette',
     title: 'Ink & Acrylic',
-    desc: 'Works in ink, white charcoal, and acrylic on primed paper, paper, and canvas — the materials named in Ini Oluwa’s statement.',
+    desc: 'Works in ink, white charcoal, and acrylic on primed paper, paper, and canvas.',
     footer: 'Paper and canvas'
   },
   {
