@@ -31,21 +31,12 @@
           <!-- Workshop Location -->
           <div style="margin-bottom: 2rem;">
             <div style="font-size: 1rem; color: white; line-height: 1.7; font-weight: 300;">
-              Workshop: Lagos, Nigeria. Contact for exact location and studio visit scheduling.
+              Workshop: Ile-ife, Nigeria. Contact for exact location and studio visit scheduling.
             </div>
           </div>
 
           <!-- Social Links -->
-          <div style="margin-bottom: 1.25rem;">
-            <a 
-              href="https://vk.com/inioluwa" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="contact-link"
-            >
-              VK
-            </a>
-          </div>
+          
           <div style="margin-bottom: 1.25rem;">
             <a 
               href="https://instagram.com/ini.oluwa" 

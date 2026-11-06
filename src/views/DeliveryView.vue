@@ -20,7 +20,7 @@
                 ONLINE PAYMENT
               </h2>
               <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 1rem;">
-                • You can reserve a painting using the "Reserve" button
+                • You can purchase a painting from the catalog's page using the "Buy Now" button. The payment is made through Paystack.
               </div>
               <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 1rem;">
                 • To pay from another country, contact the artist on Instagram <a href="https://instagram.com/ini.oluwa" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">@ini.oluwa</a>, or by email <a href="mailto:heyyinioluwa@gmail.com" style="color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">heyyinioluwa@gmail.com</a>
@@ -36,7 +36,7 @@
                 PAYMENT IN CASH
               </h2>
               <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8;">
-                You can reserve a painting through the "Reserve" button on the painting's page. You can pay and buy the painting at the address: Lagos, Nigeria. Contact via Instagram or email for exact location.
+               You can pay and buy the painting at the address: Ile-ife, Nigeria. Contact via Instagram or email for exact location.
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@
                 PICKUP
               </h2>
               <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8;">
-                You can pick up your order at the address: Lagos, Nigeria. Contact via Instagram <a href="https://instagram.com/ini.oluwa" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">@ini.oluwa</a> or email for exact pickup location and scheduling.
+                You can pick up your order at the address: Ile-ife, Nigeria. Contact via Instagram <a href="https://instagram.com/ini.oluwa" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">@ini.oluwa</a> or email for exact pickup location and scheduling.
               </div>
             </div>
           </div>
