@@ -37,9 +37,9 @@ const { isNavOpen, closeNav } = useShop()
 
       <!-- Navigation Links -->
       <nav>
-        <RouterLink to="/" class="nav-link" @click="closeNav">
+        <a href="/#about" class="nav-link" @click="closeNav">
           About
-        </RouterLink>
+        </a>
         <RouterLink to="/catalog" class="nav-link" @click="closeNav">
           Catalog
         </RouterLink>
