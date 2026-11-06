@@ -1,56 +1,85 @@
 <script setup lang="ts">
+import { RouterLink, useRoute } from 'vue-router'
 import { useShop } from '../composables/useShop'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 
+const route = useRoute()
 const { openNav, openCart, cartTotalCount } = useShop()
+const isScrolled = ref(false)
+
+// Check if we're on a page that should show cart in header (home page only)
+const showCartInHeader = computed(() => {
+  return route.path === '/'
+})
+
+// Check if we should hide cart completely (delivery and contacts pages)
+const hideCart = computed(() => {
+  return route.path === '/delivery' || route.path === '/contacts'
+})
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 100
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+  handleScroll()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <header class="docked full-width top-0 sticky z-40 bg-surface/90 backdrop-blur-md border-b border-surface-container-highest transition-colors duration-150">
-    <!-- Announcement Bar for $50 Signed Prints -->
-    <div class="bg-primary-container text-on-primary py-1.5 px-4 text-center border-b border-surface-container-highest">
-      <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 text-[11px] font-label-caps uppercase tracking-widest">
-        <span>Signed Prints are available for each painting at $50 each</span>
-        <span class="hidden sm:inline text-on-tertiary-container">·</span>
-        <a href="#featured-collection" class="hidden sm:inline underline underline-offset-2 hover:text-on-tertiary-container transition-colors">Browse Catalogue</a>
-      </div>
-    </div>
+  <header class="site-header" :class="{ 'is-scrolled': isScrolled }">
+    <!-- Wordmark / Logo -->
+    <RouterLink to="/" class="wordmark">
+      INI OLUWA
+    </RouterLink>
 
-    <div class="flex justify-between items-center w-full px-5 md:px-16 max-w-7xl mx-auto h-16 md:h-20">
-      <!-- Leading: Drawer Menu Button -->
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <!-- Shopping Cart Button - ONLY on home page -->
       <button
-        id="btn-open-drawer"
-        aria-label="Open Navigation Menu"
-        class="p-2 -ml-2 text-primary hover:text-on-tertiary-container transition-opacity duration-150 active:opacity-70 focus:outline-none flex items-center justify-center cursor-pointer"
-        @click="openNav"
-      >
-        <span class="material-symbols-outlined text-[24px]">menu</span>
-      </button>
-
-      <!-- Brand / Wordmark -->
-      <a
-        href="#"
-        class="text-headline-sm font-headline-sm tracking-wider text-primary uppercase text-center focus:outline-none hover:opacity-85 transition-opacity"
-      >
-        INI OLUWA
-      </a>
-
-      <!-- Trailing: Shopping Cart Toggle Button -->
-      <button
-        id="btn-open-cart"
-        aria-label="Open Cart"
-        class="p-2 -mr-2 text-primary hover:text-on-tertiary-container transition-opacity duration-150 active:opacity-70 focus:outline-none relative flex items-center justify-center cursor-pointer"
+        v-if="showCartInHeader && !hideCart"
+        class="icon-btn"
+        :class="{ 'is-scrolled': isScrolled }"
+        aria-label="Open shopping cart"
         @click="openCart"
       >
-        <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
-        <!-- Live Counter Badge -->
-        <span
-          id="header-cart-badge"
-          class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-label-caps font-bold px-1.5 py-0.5 min-w-[18px] text-center leading-tight transition-transform duration-200"
-          :class="{ 'scale-110': cartTotalCount > 0 }"
-        >
-          {{ cartTotalCount }}
-        </span>
+        <svg width="22" height="24" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 7V5C5 2.79086 6.79086 1 9 1H11C13.2091 1 15 2.79086 15 5V7M1 7H19L18 21H2L1 7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <span v-if="cartTotalCount > 0" class="bag-count">{{ cartTotalCount }}</span>
+      </button>
+
+      <!-- Hamburger Menu Button - shows on scroll OR on non-home pages -->
+      <button
+        v-if="isScrolled || !showCartInHeader"
+        class="nav-mobile-btn"
+        aria-label="Open menu"
+        @click="openNav"
+      >
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
     </div>
   </header>
+
+  <!-- Fixed Shopping Bag - Bottom Right (NOT on home page, and NOT on delivery/contacts) -->
+  <button
+    v-if="!showCartInHeader && !hideCart"
+    class="fixed-cart-btn"
+    aria-label="Open shopping cart"
+    @click="openCart"
+  >
+    <svg width="24" height="26" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 7V5C5 2.79086 6.79086 1 9 1H11C13.2091 1 15 2.79086 15 5V7M1 7H19L18 21H2L1 7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <span v-if="cartTotalCount > 0" class="fixed-cart-badge">{{ cartTotalCount }}</span>
+  </button>
 </template>

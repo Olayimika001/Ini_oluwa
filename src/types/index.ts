@@ -23,3 +23,14 @@ export interface CartItem {
   imgSrc: string
   imageAlt: string
 }
+
+export type OrderChannel = 'whatsapp' | 'instagram' | 'email'
+
+export interface OrderDetails {
+  fullName: string
+  phone: string
+  address: string
+  note: string
+  channel: OrderChannel
+  privacyAccepted: boolean
+}

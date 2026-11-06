@@ -1,5 +1,5 @@
 import { ref, computed } from 'vue'
-import type { Product, CartItem } from '../types'
+import type { Product, CartItem, OrderDetails } from '../types'
 
 const cart = ref<CartItem[]>([])
 
@@ -11,6 +11,14 @@ const toastMessage = ref('')
 const isToastVisible = ref(false)
 const isOrderCopied = ref(false)
 const orderMessage = ref('')
+const orderDetails = ref<OrderDetails>({
+  fullName: '',
+  phone: '',
+  address: '',
+  note: '',
+  channel: 'whatsapp',
+  privacyAccepted: false
+})
 let toastTimeout: number | undefined
 
 async function copyToClipboard(text: string): Promise<boolean> {
@@ -49,7 +57,7 @@ function generateOrderMessage(items: CartItem[], total: number): string {
     )
     .join('\n')
 
-  return `Hello Ini Oluwa (@ini.oluwa)!
+  const base = `Hello Ini Oluwa (@ini.oluwa)!
 
 I would like to order / inquire about the following artwork(s) from your 2026 catalogue:
 
@@ -58,6 +66,20 @@ ${artworkLines}
 Total Subtotal: $${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
 
 I'd like to discuss framing, shipping, availability, and any other details with you here on Instagram!`
+
+  const details = orderDetails.value
+  const customerLines = [
+    details.fullName && `Full name: ${details.fullName}`,
+    details.phone && `Phone: ${details.phone}`,
+    details.address && `Delivery address / pickup: ${details.address}`,
+    details.note && `Note: ${details.note}`
+  ].filter(Boolean)
+
+  if (customerLines.length) {
+    return `${base}\n\n${customerLines.join('\n')}`
+  }
+
+  return base
 }
 
 export function useShop() {

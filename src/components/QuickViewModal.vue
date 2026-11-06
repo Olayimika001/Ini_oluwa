@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { Transition } from 'vue'
 import { useShop } from '../composables/useShop'
 
 const {
@@ -9,137 +9,172 @@ const {
   selectQuickViewVariant,
   addQuickViewToBag
 } = useShop()
-
-const isPrintSelected = computed(() => {
-  return selectedQuickViewVariant.value.toLowerCase().includes('print')
-})
-
-const currentPrice = computed(() => {
-  if (!quickViewProduct.value) return 0
-  if (isPrintSelected.value) {
-    return quickViewProduct.value.printPrice ?? 50
-  }
-  return quickViewProduct.value.price
-})
 </script>
 
 <template>
-  <div
-    id="quickview-backdrop"
-    class="fixed inset-0 bg-primary/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-8 transition-opacity duration-300"
-    :class="quickViewProduct ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'"
-    @click.self="closeQuickView"
-  >
-    <div
-      v-if="quickViewProduct"
-      id="quickview-modal"
-      class="bg-surface max-w-2xl w-full border border-surface-container-highest shadow-2xl transition-all duration-300 max-h-[795px] overflow-y-auto"
-      :class="quickViewProduct ? 'scale-100 opacity-100' : 'scale-95 opacity-0'"
-    >
-      <div class="relative p-6 md:p-8">
-        <button
-          id="btn-close-quickview"
-          aria-label="Close product preview"
-          class="absolute top-5 right-5 text-secondary hover:text-primary cursor-pointer p-1"
-          @click="closeQuickView"
-        >
-          <span class="material-symbols-outlined">close</span>
-        </button>
+  <Teleport to="body">
+    <Transition name="fade">
+      <div
+        v-if="quickViewProduct"
+        class="modal-backdrop"
+        @click="closeQuickView"
+      >
+        <div class="modal-panel" @click.stop>
+          <!-- Close Button -->
+          <button
+            class="modal-close"
+            @click="closeQuickView"
+          >
+            ×
+          </button>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
-          <!-- Modal Image Frame -->
-          <div class="bg-surface-container p-4 border border-surface-container-highest flex items-center justify-center">
+          <!-- Image Side -->
+          <div class="modal-image-side">
             <img
-              id="qv-image"
               :src="quickViewProduct.imgSrc"
               :alt="quickViewProduct.imgAlt"
-              class="w-full h-72 object-contain"
+              style="width: 100%; height: auto; max-height: 600px; object-fit: contain;"
             />
           </div>
 
-          <!-- Modal Details -->
-          <div class="flex flex-col justify-between">
+          <!-- Info Side -->
+          <div class="modal-info-side">
             <div>
-              <div class="flex flex-wrap items-center gap-2 mb-2">
-                <span
-                  id="qv-badge"
-                  class="inline-block border border-surface-container-highest bg-surface-container-low px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-primary uppercase"
-                >
-                  {{ isPrintSelected ? 'Signed Print ($50)' : 'Unique Original Work' }}
-                </span>
-                <span
-                  v-if="!isPrintSelected"
-                  class="inline-block border border-on-tertiary-container/30 bg-surface px-2 py-0.5 text-label-caps font-label-caps text-[10px] text-on-tertiary-container uppercase"
-                >
-                  $50 Signed Prints Available
-                </span>
-              </div>
-
-              <h3 id="qv-title" class="font-headline-sm text-headline-sm text-primary mb-1">
+              <h2 style="font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; color: #333; margin-bottom: 0.5rem;">
                 {{ quickViewProduct.title }}
-              </h3>
-
-              <div class="flex items-baseline gap-3 mb-3">
-                <p id="qv-price" class="font-body-md text-primary font-bold text-2xl">
-                  ${{ currentPrice.toLocaleString() }}
-                </p>
-                <span class="text-caption text-secondary">
-                  {{ isPrintSelected ? 'Signed print ($50)' : 'Original piece' }}
-                </span>
-              </div>
-
-              <p id="qv-desc" class="font-body-sm text-body-sm text-secondary mb-5">
-                {{ quickViewProduct.desc }}
-              </p>
-
-              <!-- Option Selectors -->
-              <div class="mb-6">
-                <label class="block font-label-caps text-label-caps uppercase text-secondary mb-2 tracking-wider">
-                  Select Format
-                </label>
-                <div id="qv-size-group" class="flex flex-col gap-2">
-                  <button
-                    v-for="opt in quickViewProduct.options"
-                    :key="opt"
-                    type="button"
-                    class="qv-size-btn border px-3 py-2 font-label-caps text-[11px] cursor-pointer transition-colors text-left flex justify-between items-center"
-                    :class="selectedQuickViewVariant === opt
-                      ? 'border-primary bg-primary-container text-on-primary font-semibold'
-                      : 'border-surface-container-highest bg-surface text-primary hover:border-primary'"
-                    @click="selectQuickViewVariant(opt)"
-                  >
-                    <span>{{ opt }}</span>
-                    <span class="text-xs">
-                      {{ opt.toLowerCase().includes('print') ? '$50' : `$${quickViewProduct.price.toLocaleString()}` }}
-                    </span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Print / Artwork Note -->
-              <div class="border-t border-b border-surface-container-highest py-2.5 mb-6 text-caption font-caption text-secondary">
-                <template v-if="isPrintSelected">
-                  Signed prints are available for each painting at $50 each.
-                </template>
-                <template v-else>
-                  Unique original from the 2026 selected works catalogue. Signed prints are available for each painting at $50 each.
-                </template>
+              </h2>
+              <div style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">
+                {{ quickViewProduct.specs }}
               </div>
             </div>
 
+            <div style="padding: 1.5rem 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+              <p style="font-size: 0.9rem; color: #666; line-height: 1.7;">
+                {{ quickViewProduct.desc }}
+              </p>
+            </div>
+
+            <!-- Variant Selection -->
+            <div v-if="quickViewProduct.options.length > 1">
+              <label style="display: block; font-size: 0.75rem; color: #999; text-transform: uppercase; margin-bottom: 0.75rem;">
+                Select Option
+              </label>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <button
+                  v-for="option in quickViewProduct.options"
+                  :key="option"
+                  @click="selectQuickViewVariant(option)"
+                  style="border: 1px solid #ddd; padding: 0.75rem 1rem; background: white; text-align: left; cursor: pointer; transition: all 0.2s; font-size: 0.85rem; color: #333;"
+                  :style="{
+                    borderColor: selectedQuickViewVariant === option ? '#333' : '#ddd',
+                    background: selectedQuickViewVariant === option ? '#f9f9f9' : 'white'
+                  }"
+                >
+                  {{ option }}
+                </button>
+              </div>
+            </div>
+
+            <!-- Price -->
+            <div style="font-size: 1.75rem; font-weight: 500; color: #333;">
+              ${{ selectedQuickViewVariant?.toLowerCase().includes('print') 
+                  ? (quickViewProduct.printPrice ?? 50) 
+                  : quickViewProduct.price 
+              }}
+            </div>
+
+            <!-- Add to Cart Button -->
             <button
-              id="qv-add-to-cart-btn"
-              class="w-full bg-primary-container text-on-primary py-3 px-6 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200 cursor-pointer"
               @click="addQuickViewToBag"
+              style="width: 100%; padding: 1rem; background: #333; color: white; border: 0; font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; font-size: 0.85rem;"
             >
-              Add {{ isPrintSelected ? 'Signed Print ($50)' : 'Original' }} to Bag
+              Add to Cart
             </button>
-            <p class="text-[11px] font-caption text-secondary text-center mt-2.5">
-              Orders continue directly with Ini Oluwa via Instagram DM (<strong>@ini.oluwa</strong>).
+
+            <p style="font-size: 0.75rem; color: #999; text-align: center;">
+              Orders continue via Instagram DM or WhatsApp
             </p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </Transition>
+  </Teleport>
 </template>
+
+<style scoped>
+.modal-panel {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-image-side {
+  background: #f5f5f5;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-info-side {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--duration) var(--ease);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 900px) {
+  .modal-panel {
+    grid-template-columns: 1fr !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    width: 95vw !important;
+    margin: 0 auto;
+  }
+  
+  .modal-close {
+    position: fixed !important;
+    top: 1.5rem !important;
+    right: 1.5rem !important;
+    background: white !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    z-index: 100 !important;
+  }
+  
+  .modal-image-side {
+    padding: 1.5rem !important;
+  }
+  
+  .modal-info-side {
+    padding: 1.5rem !important;
+  }
+}
+</style>

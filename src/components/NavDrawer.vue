@@ -1,84 +1,102 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import { useShop } from '../composables/useShop'
+import { Transition } from 'vue'
 
 const { isNavOpen, closeNav } = useShop()
-
-const navLinks = [
-  { href: '#featured-collection', icon: 'palette', label: 'Selected Works', primary: true },
-  { href: '#shop-categories', icon: 'layers', label: 'Shop by Medium', primary: false },
-  { href: '#artwork-story', icon: 'auto_stories', label: 'From the Series', primary: false },
-  { href: '#meet-artist', icon: 'person', label: 'Artist Statement', primary: false }
-]
-
-function handleNavClick() {
-  closeNav()
-}
 </script>
 
 <template>
-  <div>
-    <!-- Backdrop -->
+  <Teleport to="body">
+    <!-- Backdrop - only shows when menu is open, clicking closes menu -->
+    <Transition name="fade">
+      <div
+        v-if="isNavOpen"
+        class="fixed inset-0 z-40"
+        @click="closeNav"
+        style="background: transparent;"
+      ></div>
+    </Transition>
+
+    <!-- Slide-out Menu Panel - Full height with close button -->
     <div
-      id="drawer-backdrop"
-      class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 transition-opacity duration-300"
-      :class="isNavOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'"
-      @click="closeNav"
-    />
-
-    <!-- Navigation Drawer Panel -->
-    <aside
-      id="nav-drawer"
-      aria-label="Main Navigation"
-      class="fixed inset-y-0 left-0 w-80 max-w-[85vw] z-50 bg-surface-container-low border-r border-surface-container-highest shadow-2xl transition-transform duration-300 ease-in-out flex flex-col justify-between p-8"
-      :class="isNavOpen ? 'translate-x-0' : '-translate-x-full'"
+      class="nav-menu"
+      :class="{ 'is-open': isNavOpen }"
     >
-      <div>
-        <div class="flex items-center justify-between pb-6 border-b border-surface-container-highest">
-          <span class="text-headline-md font-headline-md text-primary uppercase tracking-widest text-lg">
-            INI OLUWA
-          </span>
-          <button
-            id="btn-close-drawer"
-            aria-label="Close Navigation Menu"
-            class="p-1 text-secondary hover:text-primary focus:outline-none cursor-pointer"
-            @click="closeNav"
-          >
-            <span class="material-symbols-outlined">close</span>
-          </button>
-        </div>
+      <!-- Close Button -->
+      <button 
+        @click="closeNav"
+        class="nav-close-btn"
+        aria-label="Close menu"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
 
-        <nav class="mt-4 flex flex-col">
-          <a
-            v-for="link in navLinks"
-            :key="link.label"
-            :href="link.href"
-            class="drawer-nav-link flex items-center gap-4 uppercase tracking-wider py-4 border-b transition-colors duration-150"
-            :class="link.primary 
-              ? 'text-primary font-label-caps border-surface-container-highest hover:text-on-tertiary-container' 
-              : 'text-secondary font-label-caps border-surface-container-highest/60 hover:text-on-tertiary-container'"
-            @click="handleNavClick"
-          >
-            <span class="material-symbols-outlined">{{ link.icon }}</span>
-            <span>{{ link.label }}</span>
+      <!-- Navigation Links -->
+      <nav>
+        <RouterLink to="/" class="nav-link" @click="closeNav">
+          About
+        </RouterLink>
+        <RouterLink to="/catalog" class="nav-link" @click="closeNav">
+          Catalog
+        </RouterLink>
+        <RouterLink to="/delivery" class="nav-link" @click="closeNav">
+          Delivery and payment
+        </RouterLink>
+        <RouterLink to="/contacts" class="nav-link" @click="closeNav">
+          Contacts
+        </RouterLink>
+      </nav>
+
+      <!-- Footer branding at bottom -->
+      <div class="nav-menu-footer">
+        <div style="font-weight: 400; color: var(--color-text); margin-bottom: 0.75rem; font-size: 0.85rem;">
+          INI OLUWA
+        </div>
+        <div style="display: flex; gap: 1.25rem; font-size: 0.75rem;">
+          <a href="https://instagram.com/ini.oluwa" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; opacity: 0.8;">
+            Instagram
           </a>
-        </nav>
-
-        <div class="mt-6 p-4 bg-surface border border-surface-container-highest">
-          <span class="font-label-caps uppercase text-[10px] text-on-tertiary-container tracking-wider font-semibold block">
-            Signed Prints
-          </span>
-          <p class="font-caption text-secondary text-xs mt-1">
-            Signed prints are available for each painting at $50 each.
-          </p>
+          <a href="https://wa.me/2348138659176" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; opacity: 0.8;">
+            WhatsApp
+          </a>
         </div>
       </div>
-
-      <div class="pt-6 border-t border-surface-container-highest text-secondary text-caption space-y-2">
-        <p class="font-label-caps uppercase tracking-widest text-primary text-[10px]">
-          Ini Oluwa · Selected Works 2026
-        </p>
-        <p>heyyinioluwa@gmail.com · +234 813 865 9176 · Instagram @ini.oluwa</p>
-      </div>
-    </aside>
-  </div>
+    </div>
+  </Teleport>
 </template>
+
+<style scoped>
+.nav-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--duration) var(--ease);
+  z-index: 10;
+}
+
+.nav-close-btn:hover {
+  opacity: 0.7;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--duration) var(--ease);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
