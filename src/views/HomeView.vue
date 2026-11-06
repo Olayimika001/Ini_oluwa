@@ -1,11 +1,27 @@
 <script setup lang="ts">
 import { PRODUCTS } from '../data/products'
 import { useShop } from '../composables/useShop'
+import { useRouter } from 'vue-router'
 
 const { openQuickView } = useShop()
+const router = useRouter()
 
 // First 6 featured artworks for home page grid
 const featuredWorks = PRODUCTS.slice(0, 6)
+
+// Navigation handler for hero section links
+const navigateTo = (path: string) => {
+  if (path === '#about') {
+    // Scroll to about section on current page
+    const aboutSection = document.getElementById('about')
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  } else {
+    // Use Vue Router for other pages
+    router.push(path)
+  }
+}
 </script>
 
 <template>
@@ -26,36 +42,36 @@ const featuredWorks = PRODUCTS.slice(0, 6)
       <div class="desktop-nav-panel" style="position: absolute; top: 0; right: 0; bottom: 0; width: 250px; background: transparent; padding: 2rem; display: flex; flex-direction: column; justify-content: center; z-index: 10;">
         <!-- Navigation Links -->
         <nav style="display: flex; flex-direction: column; gap: 2.5rem;">
-          <a href="/#about" style="color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; text-shadow: 0 2px 8px rgba(0,0,0,0.5);" class="nav-link-hover">
+          <button @click="navigateTo('#about')" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; text-shadow: 0 2px 8px rgba(0,0,0,0.5);" class="nav-link-hover">
             About
-          </a>
-          <a href="/catalog" style="color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; text-shadow: 0 2px 8px rgba(0,0,0,0.5);" class="nav-link-hover">
+          </button>
+          <button @click="navigateTo('/catalog')" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; text-shadow: 0 2px 8px rgba(0,0,0,0.5);" class="nav-link-hover">
             Catalog
-          </a>
-          <a href="/delivery" style="color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; text-shadow: 0 2px 8px rgba(0,0,0,0.5);" class="nav-link-hover">
+          </button>
+          <button @click="navigateTo('/delivery')" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; text-shadow: 0 2px 8px rgba(0,0,0,0.5);" class="nav-link-hover">
             Delivery and payment
-          </a>
-          <a href="/contacts" style="color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; text-shadow: 0 2px 8px rgba(0,0,0,0.5);" class="nav-link-hover">
+          </button>
+          <button @click="navigateTo('/contacts')" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; color: white; text-decoration: none; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; text-shadow: 0 2px 8px rgba(0,0,0,0.5);" class="nav-link-hover">
             Contacts
-          </a>
+          </button>
         </nav>
       </div>
 
       <!-- MOBILE: Navigation links overlaid on center-right (transparent) -->
       <div class="mobile-nav-overlay" style="position: absolute; top: 50%; right: 1.5rem; transform: translateY(-25%); z-index: 10; display: none;">
         <nav style="display: flex; flex-direction: column; gap: 2.5rem; align-items: flex-start;">
-          <a href="/#about" style="color: white; text-decoration: none; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 2px 8px rgba(0,0,0,0.8); transition: opacity 0.3s;" class="nav-link-hover">
+          <button @click="navigateTo('#about')" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; color: white; text-decoration: none; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 2px 8px rgba(0,0,0,0.8); transition: opacity 0.3s;" class="nav-link-hover">
             About
-          </a>
-          <a href="/catalog" style="color: white; text-decoration: none; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 2px 8px rgba(0,0,0,0.8); transition: opacity 0.3s;" class="nav-link-hover">
+          </button>
+          <button @click="navigateTo('/catalog')" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; color: white; text-decoration: none; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 2px 8px rgba(0,0,0,0.8); transition: opacity 0.3s;" class="nav-link-hover">
             Catalog
-          </a>
-          <a href="/delivery" style="color: white; text-decoration: none; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 2px 8px rgba(0,0,0,0.8); transition: opacity 0.3s;" class="nav-link-hover">
+          </button>
+          <button @click="navigateTo('/delivery')" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; color: white; text-decoration: none; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 2px 8px rgba(0,0,0,0.8); transition: opacity 0.3s;" class="nav-link-hover">
             Delivery and payment
-          </a>
-          <a href="/contacts" style="color: white; text-decoration: none; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 2px 8px rgba(0,0,0,0.8); transition: opacity 0.3s;" class="nav-link-hover">
+          </button>
+          <button @click="navigateTo('/contacts')" style="background: none; border: none; padding: 0; text-align: left; cursor: pointer; color: white; text-decoration: none; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.02em; text-shadow: 0 2px 8px rgba(0,0,0,0.8); transition: opacity 0.3s;" class="nav-link-hover">
             Contacts
-          </a>
+          </button>
         </nav>
       </div>
     </section>
@@ -94,12 +110,12 @@ const featuredWorks = PRODUCTS.slice(0, 6)
 
         <!-- MORE button centered -->
         <div style="text-align: center; margin-top: 3rem;">
-          <a 
-            href="/catalog" 
+          <button 
+            @click="navigateTo('/catalog')" 
             class="more-btn"
           >
             more
-          </a>
+          </button>
         </div>
       </div>
     </section>
