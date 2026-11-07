@@ -194,8 +194,17 @@ const prevPage = () => {
                 class="catalog-img-hover"
               />
               
-              <!-- Add to Cart Button (top right) -->
+              <!-- SOLD Badge (top right) -->
+              <div
+                v-if="product.originalSold"
+                style="position: absolute; top: 0.75rem; right: 0.75rem; background: white; color: #333; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;"
+              >
+                sold
+              </div>
+              
+              <!-- Add to Cart Button (top right) - only show if not sold -->
               <button
+                v-else
                 @click.stop="openQuickView(product)"
                 style="position: absolute; top: 0.75rem; right: 0.75rem; background: white; border: 0; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: opacity 0.3s; color: #333; font-size: 1.25rem; font-weight: 300;"
                 class="add-btn"
@@ -213,12 +222,17 @@ const prevPage = () => {
               <div style="font-size: 0.8rem; color: #999; margin-bottom: 0.35rem;">
                 oil on canvas
               </div>
-              <div style="font-size: 0.75rem; color: var(--color-accent); font-weight: 400;">
-                Buy: ${{ product.price.toLocaleString() }}
+              <div v-if="product.originalSold" style="font-size: 0.75rem; color: var(--color-accent); font-weight: 400;">
+                Original SOLD · Print: $50
               </div>
-              <div style="font-size: 0.7rem; color: #ccc; margin-top: 0.25rem;">
-                Print: $50
-              </div>
+              <template v-else>
+                <div style="font-size: 0.75rem; color: var(--color-accent); font-weight: 400;">
+                  Buy: ${{ product.price.toLocaleString() }}
+                </div>
+                <div style="font-size: 0.7rem; color: #ccc; margin-top: 0.25rem;">
+                  Print: $50
+                </div>
+              </template>
             </div>
           </div>
         </div>

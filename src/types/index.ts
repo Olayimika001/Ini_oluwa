@@ -12,6 +12,7 @@ export interface Product {
   imgSrc: string
   imgAlt: string
   options: string[]
+  originalSold?: boolean // true if original is sold, only prints available
 }
 
 export interface CartItem {
