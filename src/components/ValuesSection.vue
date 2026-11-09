@@ -3,8 +3,8 @@ const values = [
   {
     icon: 'brush',
     title: 'Originals & Signed Prints',
-    desc: 'Each piece is available as a unique original from the 2026 catalogue. Signed prints are available for each painting at $50 each.',
-    footer: 'Signed Prints $50 each'
+    desc: 'Each piece is available as a unique original from the 2026 catalogue. Signed prints are available for each painting at $80 each.',
+    footer: 'Signed Prints $80 each'
   },
   {
     icon: 'palette',

@@ -100,83 +100,6 @@ const prevPage = () => {
           CATALOG
         </h1>
 
-        <!-- Filter Bar with Text Links -->
-        <div style="display: flex; gap: 1.5rem; margin-bottom: 3rem; flex-wrap: wrap; align-items: center;">
-          <button
-            @click="setFilter('all')"
-            :style="{
-              background: 'transparent',
-              border: 0,
-              color: activeFilter === 'all' ? 'white' : 'rgba(255,255,255,0.6)',
-              fontSize: '0.85rem',
-              padding: '0.5rem 0',
-              cursor: 'pointer',
-              fontWeight: '300',
-              textDecoration: activeFilter === 'all' ? 'underline' : 'none',
-              transition: 'all 0.3s'
-            }"
-          >
-            All works
-          </button>
-
-          <span style="color: rgba(255,255,255,0.3);">·</span>
-
-          <button
-            @click="setFilter('primed-paper')"
-            :style="{
-              background: 'transparent',
-              border: 0,
-              color: activeFilter === 'primed-paper' ? 'white' : 'rgba(255,255,255,0.6)',
-              fontSize: '0.85rem',
-              padding: '0.5rem 0',
-              cursor: 'pointer',
-              fontWeight: '300',
-              textDecoration: activeFilter === 'primed-paper' ? 'underline' : 'none',
-              transition: 'all 0.3s'
-            }"
-          >
-            Primed paper
-          </button>
-
-          <span style="color: rgba(255,255,255,0.3);">·</span>
-
-          <button
-            @click="setFilter('canvas')"
-            :style="{
-              background: 'transparent',
-              border: 0,
-              color: activeFilter === 'canvas' ? 'white' : 'rgba(255,255,255,0.6)',
-              fontSize: '0.85rem',
-              padding: '0.5rem 0',
-              cursor: 'pointer',
-              fontWeight: '300',
-              textDecoration: activeFilter === 'canvas' ? 'underline' : 'none',
-              transition: 'all 0.3s'
-            }"
-          >
-            Canvas
-          </button>
-
-          <span style="color: rgba(255,255,255,0.3);">·</span>
-
-          <button
-            @click="setFilter('paper')"
-            :style="{
-              background: 'transparent',
-              border: 0,
-              color: activeFilter === 'paper' ? 'white' : 'rgba(255,255,255,0.6)',
-              fontSize: '0.85rem',
-              padding: '0.5rem 0',
-              cursor: 'pointer',
-              fontWeight: '300',
-              textDecoration: activeFilter === 'paper' ? 'underline' : 'none',
-              transition: 'all 0.3s'
-            }"
-          >
-            Paper
-          </button>
-        </div>
-
         <!-- Catalog Grid - 3 columns, 8 items per page -->
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem 2rem; margin-bottom: 4rem; min-height: 600px;">
           <div
@@ -190,7 +113,12 @@ const prevPage = () => {
               <img
                 :src="product.imgSrc"
                 :alt="product.imgAlt"
-                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;"
+                :style="{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: product.id === 5 ? 'contain' : 'cover',
+                  transition: 'opacity 0.3s'
+                }"
                 class="catalog-img-hover"
               />
               
@@ -223,14 +151,14 @@ const prevPage = () => {
                 oil on canvas
               </div>
               <div v-if="product.originalSold" style="font-size: 0.75rem; color: var(--color-accent); font-weight: 400;">
-                Original SOLD · Print: $50
+                Original SOLD · Print: $80
               </div>
               <template v-else>
                 <div style="font-size: 0.75rem; color: var(--color-accent); font-weight: 400;">
                   Buy: ${{ product.price.toLocaleString() }}
                 </div>
                 <div style="font-size: 0.7rem; color: #ccc; margin-top: 0.25rem;">
-                  Print: $50
+                  Print: $80
                 </div>
               </template>
             </div>

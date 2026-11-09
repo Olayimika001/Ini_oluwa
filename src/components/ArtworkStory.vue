@@ -15,7 +15,7 @@ function acquireFeatured() {
 function orderFeaturedPrint() {
   const prod = PRODUCTS.find(p => p.id === 1)
   if (prod) {
-    addToBag(prod, 'Signed Print ($50)', 50)
+    addToBag(prod, 'Signed Print ($80)', 80)
     openCart()
   }
 }
@@ -63,7 +63,7 @@ function orderFeaturedPrint() {
               Original &amp; Signed Prints Available
             </h4>
             <p class="font-caption text-secondary leading-relaxed">
-              Available as the unique original work ($1,000) or as a signed print for $50. Signed prints are available for each painting at $50 each. All orders and conversations continue directly in Instagram DM (<strong>@ini.oluwa</strong>) to discuss framing, shipping, and availability.
+              Available as the unique original work ($1,000) or as a signed print for $80. Signed prints are available for each painting at $80 each. All orders and conversations continue directly in Instagram DM (<strong>@ini.oluwa</strong>) to discuss framing, shipping, and availability.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ function orderFeaturedPrint() {
               class="bg-primary-container text-on-primary py-3.5 px-6 font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-tertiary-container transition-colors duration-200 cursor-pointer"
               @click="orderFeaturedPrint"
             >
-              Order Signed Print — $50
+              Order Signed Print — $80
             </button>
           </div>
         </div>

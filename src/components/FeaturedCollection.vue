@@ -57,7 +57,7 @@ function toggleShowAll() {
           </h2>
         </div>
         <p class="font-body-md text-secondary max-w-md">
-          Forty-eight original works in ink, white charcoal, and acrylic — available as unique pieces from the 2026 catalogue. Signed Prints are available for each painting at $50 each.
+          Forty-eight original works in ink, white charcoal, and acrylic — available as unique pieces from the 2026 catalogue. Signed Prints are available for each painting at $80 each.
         </p>
       </div>
 
@@ -72,13 +72,13 @@ function toggleShowAll() {
               Signed Prints Available for Each Painting
             </span>
             <span class="font-body-sm text-secondary text-xs">
-              Signed Prints are available for each painting at $50 each.
+              Signed Prints are available for each painting at $80 each.
             </span>
           </div>
         </div>
         <div class="inline-flex items-center gap-2 bg-surface-container px-3 py-1.5 border border-surface-container-highest self-start sm:self-auto shrink-0">
           <span class="font-label-caps text-[11px] text-secondary uppercase tracking-wider">Signed Prints</span>
-          <span class="font-headline-sm text-lg font-bold text-primary">$50</span>
+          <span class="font-headline-sm text-lg font-bold text-primary">$80</span>
           <span class="font-caption text-[11px] text-secondary">each</span>
         </div>
       </div>
@@ -152,8 +152,8 @@ function toggleShowAll() {
             </button>
             <button
               class="w-full bg-primary-container hover:bg-on-tertiary-container text-on-primary border border-primary py-2.5 px-2 font-label-caps text-[11px] uppercase tracking-wider transition-colors duration-150 cursor-pointer text-center"
-              title="Add $50 Signed Print to Bag"
-              @click="addToBag(product, 'Signed Print ($50)', 50)"
+              title="Add $80 Signed Print to Bag"
+              @click="addToBag(product, 'Signed Print ($80)', 80)"
             >
               Signed Print
             </button>

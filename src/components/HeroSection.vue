@@ -10,7 +10,7 @@
           <div class="inline-flex items-center gap-2 border border-surface-container-highest bg-surface-container-low px-3 py-1">
             <span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container" />
             <span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">
-              Selected Works 2026 · Signed Prints at $50 Each
+              Selected Works 2026 · Signed Prints at $80 Each
             </span>
           </div>
 
@@ -19,7 +19,7 @@
           </h1>
 
           <p class="font-body-lg text-body-lg text-secondary max-w-xl">
-            Original ink and acrylic works on paper and canvas by Ini Oluwa — a series about what it means to be an individual, and how seminal experiences feel ordinary in the moment. Signed Prints are available for each painting at $50 each.
+            Original ink and acrylic works on paper and canvas by Ini Oluwa — a series about what it means to be an individual, and how seminal experiences feel ordinary in the moment. Signed Prints are available for each painting at $80 each.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 pt-2">
@@ -43,7 +43,7 @@
               <span class="font-label-caps text-[10px] text-secondary uppercase">Catalogue Works</span>
             </div>
             <div>
-              <span class="block font-headline-sm text-headline-sm text-primary">$50</span>
+              <span class="block font-headline-sm text-headline-sm text-primary">$80</span>
               <span class="font-label-caps text-[10px] text-on-tertiary-container uppercase font-semibold">Signed Prints</span>
             </div>
             <div>

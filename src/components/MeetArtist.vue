@@ -2,7 +2,7 @@
 const stats = [
   { value: 'Ink & Acrylic', label: 'On paper and canvas' },
   { value: '48 Works', label: 'Selected Works 2026' },
-  { value: '$50 Signed Prints', label: 'For each painting' }
+  { value: '$80 Signed Prints', label: 'For each painting' }
 ]
 </script>
 

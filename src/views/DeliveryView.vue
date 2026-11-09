@@ -20,7 +20,7 @@
                 ONLINE PAYMENT
               </h2>
               <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 1rem;">
-                • You can purchase a painting from the catalog's page using the "Buy Now" button. The payment is made through Paystack.
+                • You can purchase a painting from the catalog's page using the "Buy Now" button. 
               </div>
               <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 1rem;">
                 • To pay from another country, contact the artist on Instagram <a href="https://instagram.com/ini.oluwa" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">@ini.oluwa</a>, or by email <a href="mailto:heyyinioluwa@gmail.com" style="color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">heyyinioluwa@gmail.com</a>
@@ -73,7 +73,7 @@
             </h1>
 
             <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 3rem;">
-              Delivery is carried out all over the world. The painting is delivered in a tube. Delivery time around the world is about 3-4 weeks
+              Delivery is carried out all over the world. The painting is delivered framed or unframed depending on the request of the buyer. Delivery time is within 48 hours after payment.
             </div>
 
             <!-- Pickup -->

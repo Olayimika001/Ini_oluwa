@@ -50,9 +50,9 @@ const navigateTo = (path: string) => {
         "
       >
         <img
-          src="/catalogue/ini-oluwa-studio.jpeg"
-          alt="Ini Oluwa in studio"
-          style="width: 100%; height: auto; filter: grayscale(100%)"
+          src="/catalogue/works/work-05.jpg"
+          alt="Àníkẹ́ by Ini Oluwa"
+          style="width: 100%; height: 100%; object-fit: contain;"
         />
       </div>
 
@@ -76,7 +76,7 @@ const navigateTo = (path: string) => {
         <!-- Navigation Links -->
         <nav style="display: flex; flex-direction: column; gap: 2.5rem">
           <button
-            @click="navigateTo('#about')"
+            @click="navigateTo('#statement')"
             style="
               background: none;
               border: none;
@@ -93,7 +93,7 @@ const navigateTo = (path: string) => {
             "
             class="nav-link-hover"
           >
-            About
+            Artist Statement
           </button>
           <button
             @click="navigateTo('/catalog')"
@@ -290,12 +290,12 @@ const navigateTo = (path: string) => {
               <img
                 :src="work.imgSrc"
                 :alt="work.imgAlt"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  transition: opacity 0.3s;
-                "
+                :style="{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: work.id === 5 ? 'contain' : 'cover',
+                  transition: 'opacity 0.3s'
+                }"
                 class="artwork-hover"
               />
             </div>
@@ -331,7 +331,7 @@ const navigateTo = (path: string) => {
 
     <!-- ABOUT THE ARTIST SECTION -->
     <section
-      id="about"
+      id="statement"
       class="about-section"
       style="
         background: var(--color-bg-darker);
@@ -360,7 +360,7 @@ const navigateTo = (path: string) => {
                 letter-spacing: 0.02em;
               "
             >
-              About the artist
+              Artist Statement
             </h2>
 
             <div
