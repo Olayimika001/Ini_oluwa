@@ -42,6 +42,7 @@ const CANVAS = 'Ink & acrylic on canvas'
 const PAPER = 'Ink & acrylic on paper'
 
 export const PRODUCTS: Product[] = [
+  work(49, "A kû'jókòó", 1000, 'primed-paper', PRIMED, '18 × 24 inches'),
   work(1, 'Ìfẹnukonu III', 1000, 'primed-paper', PRIMED, '18 × 24 inches', true),
   work(2, 'Ìṣẹ̀dá', 1200, 'primed-paper', PRIMED, '18 × 24 inches'),
   work(3, 'Yánhànhàn', 1000, 'primed-paper', PRIMED, '18 × 24 inches', true),
