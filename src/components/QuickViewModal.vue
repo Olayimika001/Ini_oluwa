@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { Transition } from 'vue'
 import { useShop } from '../composables/useShop'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const {
   quickViewProduct,
@@ -9,6 +12,16 @@ const {
   selectQuickViewVariant,
   addQuickViewToBag
 } = useShop()
+
+// Handle commission selection
+const handleAddToBag = () => {
+  if (selectedQuickViewVariant.value && selectedQuickViewVariant.value.includes('Commission')) {
+    closeQuickView()
+    router.push('/commissions')
+  } else {
+    addQuickViewToBag()
+  }
+}
 </script>
 
 <template>
@@ -76,19 +89,22 @@ const {
             </div>
 
             <!-- Price -->
-            <div style="font-size: 1.75rem; font-weight: 500; color: #333;">
+            <div v-if="!selectedQuickViewVariant?.includes('Commission')" style="font-size: 1.75rem; font-weight: 500; color: #333;">
               ${{ selectedQuickViewVariant?.toLowerCase().includes('print') 
-                  ? (quickViewProduct.printPrice ?? 50) 
+                  ? (quickViewProduct.printPrice ?? 80) 
                   : quickViewProduct.price 
               }}
+            </div>
+            <div v-else style="font-size: 1rem; font-weight: 400; color: #666; padding: 1rem 0;">
+              View commission pricing page for size options and rates
             </div>
 
             <!-- Add to Cart Button -->
             <button
-              @click="addQuickViewToBag"
+              @click="handleAddToBag"
               style="width: 100%; padding: 1rem; background: #333; color: white; border: 0; font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; font-size: 0.85rem;"
             >
-              Add to Cart
+              {{ selectedQuickViewVariant?.includes('Commission') ? 'View Commission Pricing' : 'Add to Cart' }}
             </button>
 
             <p style="font-size: 0.75rem; color: #999; text-align: center;">

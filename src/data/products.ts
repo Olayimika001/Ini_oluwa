@@ -10,16 +10,16 @@ function work(
   originalSold: boolean = false
 ): Product {
   const options = originalSold 
-    ? ['Signed Print ($80)', 'Commission (Varieties of sizes)'] 
-    : [`Original (${size})`, 'Signed Print ($80)', 'Commission (Varieties of sizes)']
+    ? ['Commission (Varieties of sizes)', 'Signed Print ($80)'] 
+    : [`Original (${size})`, 'Commission (Varieties of sizes)', 'Signed Print ($80)']
   
   const badge = originalSold
-    ? 'Original SOLD · $80 Signed Print & Commission Available'
-    : 'Original · $80 Signed Print & Commission'
+    ? 'Original SOLD · Commission & $80 Signed Print Available'
+    : 'Original · Commission & $80 Signed Print'
   
   const desc = originalSold
-    ? `Original work SOLD. Signed prints are available for $80 each. Commissions available in varieties of sizes - contact for details.`
-    : `Original work by Ini Oluwa from the 2026 selected works catalogue (${material}; ${size}). Signed prints are available for each painting at $80 each. Commissions available in varieties of sizes.`
+    ? `Original work SOLD. Commissions available in varieties of sizes. Signed prints available for $80 each.`
+    : `Original work by Ini Oluwa from the 2026 selected works catalogue (${material}; ${size}). Commissions available in varieties of sizes. Signed prints available for $80 each.`
 
   return {
     id,

@@ -12,9 +12,9 @@ const showCartInHeader = computed(() => {
   return route.path === '/'
 })
 
-// Check if we should hide cart completely (delivery and contacts pages)
+// Check if we should hide cart completely (delivery, contacts, and commissions pages)
 const hideCart = computed(() => {
-  return route.path === '/delivery' || route.path === '/contacts'
+  return route.path === '/delivery' || route.path === '/contacts' || route.path === '/commissions'
 })
 
 const handleScroll = () => {

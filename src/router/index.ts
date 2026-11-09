@@ -4,6 +4,7 @@ import CatalogView from '../views/CatalogView.vue'
 import DeliveryView from '../views/DeliveryView.vue'
 import ContactsView from '../views/ContactsView.vue'
 import PrivacyView from '../views/PrivacyView.vue'
+import CommissionsView from '../views/CommissionsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,7 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'home', component: HomeView },
     { path: '/catalog', name: 'catalog', component: CatalogView },
+    { path: '/commissions', name: 'commissions', component: CommissionsView },
     { path: '/delivery', name: 'delivery', component: DeliveryView },
     { path: '/contacts', name: 'contacts', component: ContactsView },
     { path: '/privacy', name: 'privacy', component: PrivacyView }

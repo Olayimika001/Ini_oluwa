@@ -43,6 +43,9 @@ const { isNavOpen, closeNav } = useShop()
         <RouterLink to="/catalog" class="nav-link" @click="closeNav">
           Catalog
         </RouterLink>
+        <RouterLink to="/commissions" class="nav-link" @click="closeNav">
+          Commissions
+        </RouterLink>
         <RouterLink to="/delivery" class="nav-link" @click="closeNav">
           Delivery and payment
         </RouterLink>
