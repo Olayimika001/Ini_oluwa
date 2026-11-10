@@ -314,10 +314,31 @@ const navigateTo = (path: string) => {
                 {{ work.title }}
               </div>
               <div
-                style="font-size: 0.7rem; color: var(--color-text-secondary)"
+                style="font-size: 0.7rem; color: var(--color-text-secondary); margin-bottom: 0.75rem"
               >
                 ${{ work.price.toLocaleString() }}
               </div>
+              
+              <!-- Buy Now Button -->
+              <button
+                @click.stop="openQuickView(work)"
+                style="
+                  width: 100%;
+                  padding: 0.75rem 1.5rem;
+                  background: transparent;
+                  color: white;
+                  border: 1px solid white;
+                  font-size: 0.7rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em;
+                  cursor: pointer;
+                  transition: all 0.3s;
+                  font-weight: 300;
+                "
+                class="buy-now-btn"
+              >
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
@@ -416,6 +437,11 @@ const navigateTo = (path: string) => {
 
 .nav-link-hover:hover {
   opacity: 0.7;
+}
+
+.buy-now-btn:hover {
+  background: white;
+  color: #4a4a4a;
 }
 
 .more-btn {
