@@ -95,6 +95,74 @@
         </div>
 
         <!-- Divider -->
+        <div style="width: 80px; height: 1px; background: #A89B8F; margin: 0 auto 3rem;"></div>
+
+        <!-- Contact Buttons for Commission -->
+        <div style="margin-bottom: 3rem;">
+          <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 300; color: #5A5A5A; margin-bottom: 1.5rem; letter-spacing: 0.02em;">
+            Ready to commission your artwork?
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a
+              href="https://instagram.com/ini.oluwa"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 1rem 2rem;
+                background: #2B2B2B;
+                color: #E8E4DF;
+                text-decoration: none;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.8rem;
+                font-weight: 400;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                transition: all 0.3s;
+                border: 1px solid #2B2B2B;
+              "
+              class="commission-btn"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              Commission via Instagram
+            </a>
+            <a
+              href="https://wa.me/2348138659176?text=Hi%2C%20I'm%20interested%20in%20commissioning%20an%20artwork.%20I'd%20like%20to%20discuss%20sizes%20and%20details."
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 1rem 2rem;
+                background: transparent;
+                color: #2B2B2B;
+                text-decoration: none;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.8rem;
+                font-weight: 400;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                transition: all 0.3s;
+                border: 1px solid #2B2B2B;
+              "
+              class="commission-btn-outline"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              Commission via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Divider -->
         <div style="width: 80px; height: 1px; background: #A89B8F; margin: 0 auto 2rem;"></div>
 
         <!-- Footer Text -->
@@ -107,6 +175,19 @@
 </template>
 
 <style scoped>
+.commission-btn:hover {
+  background: #1A1A1A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 43, 43, 0.2);
+}
+
+.commission-btn-outline:hover {
+  background: #2B2B2B;
+  color: #E8E4DF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 43, 43, 0.2);
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   h1 {
@@ -127,6 +208,12 @@
 
   div[style*="font-size: 0.7rem"] {
     font-size: 0.65rem !important;
+  }
+
+  .commission-btn,
+  .commission-btn-outline {
+    width: 100%;
+    justify-content: center;
   }
 }
 </style>
